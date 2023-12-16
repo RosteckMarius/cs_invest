@@ -4,6 +4,10 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
 import { ErrorPage } from "./components/error-page.tsx";
+import { PriceCalculator } from "./features/price-calculator/price-calculator.tsx";
+
+export const PRICE_CALCULATOR_ROUTE = "/price-calculator";
+export const TEST_ROUTE = "/test";
 
 const router = createBrowserRouter([
     {
@@ -12,7 +16,11 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "/test",
+        path: PRICE_CALCULATOR_ROUTE,
+        element: <PriceCalculator />,
+    },
+    {
+        path: TEST_ROUTE,
         element: <h1>TEST</h1>,
     },
 ]);
