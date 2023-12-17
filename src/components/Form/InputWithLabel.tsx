@@ -1,7 +1,7 @@
-import { InputHTMLAttributes } from "react";
 import { Input } from "./Input.tsx";
 
-interface InputWithLabelProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputWithLabelProps
+    extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string;
 }
 

@@ -1,9 +1,10 @@
-import { InputWithLabel } from "../../../components/InputWithLabel.tsx";
+import { InputWithLabel } from "../../../components/Form/InputWithLabel.tsx";
 import { DECIMAL_PATTERN } from "../types/constants.ts";
 import { useCalcValues } from "../hooks/use-calc-values.tsx";
 
 export function TotalCalculation() {
-    const { calculationValues, handleChange, getNeededBankroll } = useCalcValues();
+    const { calculationValues, handleChange, getNeededBankroll } =
+        useCalcValues();
 
     return (
         <div className={"flex gap-2"}>

@@ -1,29 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.tsx";
-import { ErrorPage } from "./components/error-page.tsx";
-import { PriceCalculator } from "./features/price-calculator/price-calculator.tsx";
-
-export const PRICE_CALCULATOR_ROUTE = "/price-calculator";
-export const TEST_ROUTE = "/test";
-
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: PRICE_CALCULATOR_ROUTE,
-        element: <PriceCalculator />,
-    },
-    {
-        path: TEST_ROUTE,
-        element: <h1>TEST</h1>,
-    },
-]);
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/public.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>

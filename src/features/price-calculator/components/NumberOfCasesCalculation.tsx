@@ -1,4 +1,4 @@
-import { InputWithLabel } from "../../../components/InputWithLabel.tsx";
+import { InputWithLabel } from "../../../components/Form/InputWithLabel.tsx";
 import { DECIMAL_PATTERN } from "../types/constants.ts";
 import { useCalcValues } from "../hooks/use-calc-values.tsx";
 

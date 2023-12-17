@@ -1,7 +1,7 @@
 import { NumberOfCasesCalculation } from "./components/NumberOfCasesCalculation.tsx";
 import { CasePriceCalculation } from "./components/CasePriceCalculation.tsx";
 import { TotalCalculation } from "./components/TotalCalculation.tsx";
-import { Divider } from "../../components/Divider.tsx";
+import { Divider } from "../../components/Element/Divider.tsx";
 
 export function PriceCalculator() {
     return (
