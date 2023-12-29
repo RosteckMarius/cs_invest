@@ -4,8 +4,14 @@ import App from "../App.tsx";
 import { PriceCalculator } from "../features/price-calculator/price-calculator.tsx";
 import { ErrorPage } from "../components/error-page.tsx";
 import React from "react";
+import Contact from "../features/footer/components/contact.tsx";
+import About from "../features/footer/components/about.tsx";
+import FAQ from "../features/footer/components/faq.tsx";
 
 const PRICE_CALCULATOR_ROUTE = "/price-calculator";
+const CONTACT_ROUTE = "/contact";
+const ABOUT_US_ROUTE = "/about";
+const FAQ_ROUTE = "/faq";
 const TEST_ROUTE = "/test";
 
 const router = createBrowserRouter([
@@ -22,12 +28,27 @@ const router = createBrowserRouter([
                 element: <PriceCalculator />,
             },
             {
-                path: TEST_ROUTE,
-                element: <h1>TEST</h1>,
+                path: CONTACT_ROUTE,
+                element: <Contact />,
+            },
+            {
+                path: ABOUT_US_ROUTE,
+                element: <About />,
+            },
+            {
+                path: FAQ_ROUTE,
+                element: <FAQ />,
             },
         ],
         errorElement: <ErrorPage />,
     },
 ]);
 
-export { PRICE_CALCULATOR_ROUTE, router, TEST_ROUTE };
+export {
+    router,
+    PRICE_CALCULATOR_ROUTE,
+    TEST_ROUTE,
+    CONTACT_ROUTE,
+    ABOUT_US_ROUTE,
+    FAQ_ROUTE,
+};
