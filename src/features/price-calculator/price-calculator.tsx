@@ -7,9 +7,9 @@ export function PriceCalculator() {
     return (
         <div>
             <div>
-                <h1 className={"text-3xl"}>PRICE CALCULATOR</h1>
+                <h1 className={"text-3xl text-center "}>PRICE CALCULATOR</h1>
+                <Divider />
             </div>
-            <Divider />
             <div className={"flex flex-col gap-8 py-8"}>
                 <NumberOfCasesCalculation />
                 <TotalCalculation />
