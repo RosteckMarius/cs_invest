@@ -1,6 +1,5 @@
 import "./App.css";
 import { Divider } from "./components/Element/Divider.tsx";
-import { Menu } from "./components/Layout/Menu.tsx";
 
 function App() {
     return (
@@ -10,7 +9,6 @@ function App() {
                 <Divider />
                 <p>WELCOME</p>
             </div>
-            <Menu />
         </>
     );
 }
