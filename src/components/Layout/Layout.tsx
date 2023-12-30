@@ -6,10 +6,16 @@ export function Layout() {
     const location = useLocation();
     const backButtonVisible = location.pathname !== "/";
     return (
-        <div>
+        <div className={"flex min-h-screen flex-col"}>
             {backButtonVisible && <FloatingBackButton />}
-            <Outlet />
-            <Footer></Footer>
+            <div
+                className={
+                    "flex flex-grow flex-col items-center justify-center p-4"
+                }
+            >
+                <Outlet />
+            </div>
+            <Footer />
         </div>
     );
 }
