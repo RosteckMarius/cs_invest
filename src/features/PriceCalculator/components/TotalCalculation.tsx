@@ -1,24 +1,24 @@
-import { useCalcValues } from "@/features/price-calculator/hooks/use-calc-values.tsx";
+import { useCalcValues } from "@/features/PriceCalculator/hooks/use-calc-values.tsx";
+import { DECIMAL_PATTERN } from "@/features/PriceCalculator/types/constants.ts";
 import { InputWithLabel } from "@/components/Form/InputWithLabel.tsx";
-import { DECIMAL_PATTERN } from "@/features/price-calculator/types/constants.ts";
 
-export function NumberOfCasesCalculation() {
-    const { calculationValues, handleChange, getNumberOfCases } =
-        useCalcValues();
+export function TotalCalculation() {
+    const { calculationValues, handleChange, getNeededBankroll } = useCalcValues();
 
     return (
         <div>
             <h2 className={"md:pb-4"}>
-                Calculate how many cases you can open with your bankroll
+                Calculate how much money you need to open a certain amount of cases with a certain
+                price
             </h2>
             <div className={"flex flex-col items-center gap-2 md:flex-row"}>
                 <InputWithLabel
-                    name="bankroll"
+                    name="numberOfCases"
                     type="number"
                     pattern={DECIMAL_PATTERN}
-                    value={calculationValues.bankroll}
+                    value={calculationValues.numberOfCases}
                     onChange={handleChange}
-                    label={"BANKROLL"}
+                    label={"NUMBER OF CASES"}
                 />
                 <InputWithLabel
                     name="casePrice"
@@ -28,13 +28,13 @@ export function NumberOfCasesCalculation() {
                     onChange={handleChange}
                     label={"CASE PRICE"}
                 />
-                <div className={"my-auto px-2"}>=</div>
+                <div className={"my-auto  px-2"}>=</div>
                 <InputWithLabel
-                    name="numberOfCases"
+                    name="bankroll"
                     type="number"
-                    value={getNumberOfCases().toString()}
                     disabled
-                    label={"POSSIBLE CASES"}
+                    value={getNeededBankroll().toFixed(2).toString()}
+                    label={"TOTAL PRICE"}
                 />
             </div>
         </div>

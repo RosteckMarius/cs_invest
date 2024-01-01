@@ -1,7 +1,7 @@
 import { Divider } from "@/components/Element/Divider.tsx";
-import { NumberOfCasesCalculation } from "@/features/price-calculator/components/NumberOfCasesCalculation.tsx";
-import { TotalCalculation } from "@/features/price-calculator/components/TotalCalculation.tsx";
-import { CasePriceCalculation } from "@/features/price-calculator/components/CasePriceCalculation.tsx";
+import { NumberOfCasesCalculation } from "@/features/PriceCalculator/components/NumberOfCasesCalculation.tsx";
+import { TotalCalculation } from "@/features/PriceCalculator/components/TotalCalculation.tsx";
+import { CasePriceCalculation } from "@/features/PriceCalculator/components/CasePriceCalculation.tsx";
 
 export function PriceCalculator() {
     return (

@@ -4,11 +4,7 @@ import { PRICE_CALCULATOR_ROUTE } from "@/routes/public.tsx";
 
 export function Navigation() {
     return (
-        <div
-            className={
-                "flex justify-center gap-2 overflow-auto border-b-2 py-4"
-            }
-        >
+        <div className={"flex justify-center gap-2 overflow-auto border-b-2 py-4"}>
             <NavItem name={"Home"} to={"/"} />
             <NavItem name={"Calculator"} to={PRICE_CALCULATOR_ROUTE} />
         </div>
@@ -30,7 +26,7 @@ function NavItem(props: NavItemProps) {
                 "underline  underline-offset-4": isActiveItem,
             })}
         >
-            {props.name}
+            <span className={"text-2xl"}>{props.name}</span>
         </Link>
     );
 }

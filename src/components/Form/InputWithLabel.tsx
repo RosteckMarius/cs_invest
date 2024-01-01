@@ -1,7 +1,6 @@
 import { Input } from "@/components/Form/Input.tsx";
 
-interface InputWithLabelProps
-    extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputWithLabelProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string;
 }
 
@@ -11,11 +10,7 @@ export function InputWithLabel(props: InputWithLabelProps) {
             <label className={"block"} htmlFor={props.label}>
                 {props.label}
             </label>
-            <Input
-                className={"rounded p-2"}
-                id={props.label}
-                {...props}
-            ></Input>
+            <Input className={"rounded p-2"} id={props.label} {...props}></Input>
         </div>
     );
 }

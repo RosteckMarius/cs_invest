@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
-import { defaultCalculationValues } from "@/features/price-calculator/types/constants.ts";
-import { CalculationValues } from "@/features/price-calculator/types/types.ts";
+import { defaultCalculationValues } from "@/features/PriceCalculator/types/constants.ts";
+import { CalculationValues } from "@/features/PriceCalculator/types/types.ts";
 import { KEY_PRICE } from "@/util/constants.ts";
 
 export const useCalcValues = () => {
