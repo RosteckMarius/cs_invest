@@ -21,6 +21,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+    @apply text-4xl pb-2
+}
+
 h2 {
     @apply text-lg pb-2
 }

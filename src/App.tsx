@@ -5,9 +5,9 @@ export function App() {
     return (
         <>
             <div className={"flex flex-col gap-2 pb-8 text-center"}>
-                <h1 className={"text-3xl"}>CS INVEST</h1>
+                <h1>CS INVEST</h1>
                 <Divider />
-                <p>WELCOME</p>
+                <span className={"text-lg"}>WELCOME</span>
             </div>
         </>
     );
