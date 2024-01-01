@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Montserrat, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -21,12 +21,27 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+svg {
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    padding: .5rem;
+    border-radius: 15%;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    /* Add other font formats if necessary */
+    font-weight: auto;
+    font-style: normal;
+}
+
 h1 {
     @apply pb-4 text-4xl;
 }
 
 h2 {
-    @apply pb-2 text-lg;
+    @apply pb-2 text-xl;
 }
 
 html,

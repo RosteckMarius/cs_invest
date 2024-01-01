@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 interface FeatureBlockProps {
     text: string;
     icon: ReactNode;
-    iconFirst: boolean;
+    iconFirst?: boolean;
 }
 
 export function FeatureBlock(props: FeatureBlockProps) {
@@ -19,7 +19,7 @@ export function FeatureBlock(props: FeatureBlockProps) {
             >
                 {props.icon}
             </span>
-            <div className={"my-auto w-2/3 text-center text-xl"}>{props.text}</div>
+            <div className={"my-auto w-2/3 text-center text-xl "}>{props.text}</div>
         </div>
     );
 }
