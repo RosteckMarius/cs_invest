@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Layout } from "../components/Layout/Layout.tsx";
-import App from "../App.tsx";
-import { PriceCalculator } from "../features/price-calculator/PriceCalculator.tsx";
-import { ErrorPage } from "../components/ErrorPage.tsx";
 import React from "react";
-import Contact from "../features/footer/components/Contact.tsx";
-import About from "../features/footer/components/About.tsx";
-import Faq from "../features/footer/components/Faq.tsx";
+import { Contact } from "@/features/footer/components/Contact.tsx";
+import { About } from "@/features/footer/components/About.tsx";
+import { FAQ } from "@/features/footer/components/Faq.tsx";
+import { Layout } from "@/components/Layout/Layout.tsx";
+import { PriceCalculator } from "@/features/price-calculator/PriceCalculator.tsx";
+import { ErrorPage } from "@/components/ErrorPage.tsx";
+import { App } from "@/App.tsx";
 
 const PRICE_CALCULATOR_ROUTE = "/price-calculator";
 const CONTACT_ROUTE = "/contact";
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
             },
             {
                 path: FAQ_ROUTE,
-                element: <Faq />,
+                element: <FAQ />,
             },
         ],
         errorElement: <ErrorPage />,

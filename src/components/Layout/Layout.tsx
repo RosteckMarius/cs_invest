@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { FloatingBackButton } from "./FloatingBackButton.tsx";
-import { Footer } from "./Footer.tsx";
-import Navigation from "./Navigation.tsx";
+import { FloatingBackButton } from "@/components/Layout/FloatingBackButton.tsx";
+import { Navigation } from "@/components/Layout/Navigation.tsx";
+import { Footer } from "@/components/Layout/Footer.tsx";
 
 export function Layout() {
     const location = useLocation();

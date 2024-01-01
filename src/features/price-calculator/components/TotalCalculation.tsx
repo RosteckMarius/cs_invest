@@ -1,6 +1,6 @@
-import { InputWithLabel } from "../../../components/Form/InputWithLabel.tsx";
-import { DECIMAL_PATTERN } from "../types/constants.ts";
-import { useCalcValues } from "../hooks/use-calc-values.tsx";
+import { useCalcValues } from "@/features/price-calculator/hooks/use-calc-values.tsx";
+import { DECIMAL_PATTERN } from "@/features/price-calculator/types/constants.ts";
+import { InputWithLabel } from "@/components/Form/InputWithLabel.tsx";
 
 export function TotalCalculation() {
     const { calculationValues, handleChange, getNeededBankroll } =
@@ -8,9 +8,11 @@ export function TotalCalculation() {
 
     return (
         <div>
-            <h2 className={"md:pb-4"}>Calculate how much money you need to open a certain amount of cases with a certain
-                price</h2>
-            <div className={"flex flex-col md:flex-row items-center gap-2"}>
+            <h2 className={"md:pb-4"}>
+                Calculate how much money you need to open a certain amount of
+                cases with a certain price
+            </h2>
+            <div className={"flex flex-col items-center gap-2 md:flex-row"}>
                 <InputWithLabel
                     name="numberOfCases"
                     type="number"

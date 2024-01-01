@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import * as classNames from "classnames";
-import { PRICE_CALCULATOR_ROUTE } from "../../routes/public.tsx";
+import classNames from "classnames";
+import { PRICE_CALCULATOR_ROUTE } from "@/routes/public.tsx";
 
-export default function Navigation() {
+export function Navigation() {
     return (
         <div
             className={
@@ -27,7 +27,7 @@ function NavItem(props: NavItemProps) {
         <Link
             to={props.to}
             className={classNames("rounded p-2 hover:bg-gray-700", {
-                "bg-gray-700": isActiveItem,
+                "underline  underline-offset-4": isActiveItem,
             })}
         >
             {props.name}

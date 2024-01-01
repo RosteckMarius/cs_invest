@@ -1,4 +1,4 @@
-import { Input } from "./Input.tsx";
+import { Input } from "@/components/Form/Input.tsx";
 
 interface InputWithLabelProps
     extends React.InputHTMLAttributes<HTMLInputElement> {

@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-    ABOUT_US_ROUTE,
-    CONTACT_ROUTE,
-    FAQ_ROUTE,
-} from "../../routes/public.tsx";
+import { ABOUT_US_ROUTE, CONTACT_ROUTE, FAQ_ROUTE } from "@/routes/public.tsx";
 
 export function Footer() {
     return (

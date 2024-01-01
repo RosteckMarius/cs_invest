@@ -1,7 +1,7 @@
-import "./App.css";
-import { Divider } from "./components/Element/Divider.tsx";
+import "@/App.css";
+import { Divider } from "@/components/Element/Divider.tsx";
 
-function App() {
+export function App() {
     return (
         <>
             <div className={"flex flex-col gap-2 pb-8 text-center"}>
@@ -12,5 +12,3 @@ function App() {
         </>
     );
 }
-
-export default App;

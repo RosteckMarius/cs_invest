@@ -1,16 +1,20 @@
-import { InputWithLabel } from "../../../components/Form/InputWithLabel.tsx";
-import { DECIMAL_PATTERN, INTEGER_PATTERN } from "../types/constants.ts";
-import { useCalcValues } from "../hooks/use-calc-values.tsx";
+import { InputWithLabel } from "@/components/Form/InputWithLabel.tsx";
+import {
+    DECIMAL_PATTERN,
+    INTEGER_PATTERN,
+} from "@/features/price-calculator/types/constants.ts";
+import { useCalcValues } from "@/features/price-calculator/hooks/use-calc-values.tsx";
 
 export function CasePriceCalculation() {
     const { calculationValues, handleChange, getCasePrice } = useCalcValues();
 
     return (
         <div>
-            <h2 className={"md:pb-4"}>Calculate how expensive the case can be if you know the amount you want to open
-                and your
-                bankroll</h2>
-            <div className={"flex flex-col md:flex-row items-center gap-2"}>
+            <h2 className={"md:pb-4"}>
+                Calculate how expensive the case can be if you know the amount
+                you want to open and your bankroll
+            </h2>
+            <div className={"flex flex-col items-center gap-2 md:flex-row"}>
                 <InputWithLabel
                     name="numberOfCases"
                     type="number"

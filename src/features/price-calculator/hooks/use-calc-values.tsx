@@ -1,19 +1,17 @@
 import { ChangeEvent, useState } from "react";
-import { CalculationValues } from "../types/types.ts";
-import { defaultCalculationValues } from "../types/constants.ts";
-import { KEY_PRICE } from "../../../util/constants.ts";
+import { defaultCalculationValues } from "@/features/price-calculator/types/constants.ts";
+import { CalculationValues } from "@/features/price-calculator/types/types.ts";
+import { KEY_PRICE } from "@/util/constants.ts";
 
 export const useCalcValues = () => {
-
     const [calculationValues, setCalculationValues] =
         useState<CalculationValues>(defaultCalculationValues);
 
     function handleChange(e: ChangeEvent<HTMLInputElement>) {
-
         setCalculationValues((prevState) => {
             return {
                 ...prevState,
-                [e.target.name]: e.target.valueAsNumber
+                [e.target.name]: e.target.valueAsNumber,
             };
         });
     }
@@ -33,6 +31,11 @@ export const useCalcValues = () => {
         return Math.floor(bankroll / (casePrice + KEY_PRICE));
     }
 
-
-    return { calculationValues, handleChange, getCasePrice, getNumberOfCases, getNeededBankroll };
+    return {
+        calculationValues,
+        handleChange,
+        getCasePrice,
+        getNumberOfCases,
+        getNeededBankroll,
+    };
 };
