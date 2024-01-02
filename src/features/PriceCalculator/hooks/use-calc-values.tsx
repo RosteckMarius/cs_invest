@@ -1,18 +1,23 @@
 import { ChangeEvent, useState } from "react";
-import { defaultCalculationValues } from "@/features/PriceCalculator/types/constants.ts";
 import { CalculationValues } from "@/features/PriceCalculator/types/types.ts";
 import { KEY_PRICE } from "@/util/constants.ts";
+import { useLocalStorage } from "@/hooks/useLocalStorage.ts";
 
-export const useCalcValues = () => {
-    const [calculationValues, setCalculationValues] =
-        useState<CalculationValues>(defaultCalculationValues);
+export const useCalcValues = (storageKey: "total" | "case-price" | "amount") => {
+    const { setItem, getItem } = useLocalStorage();
+
+    const [calculationValues, setCalculationValues] = useState<CalculationValues>(
+        getItem(storageKey),
+    );
 
     function handleChange(e: ChangeEvent<HTMLInputElement>) {
         setCalculationValues((prevState) => {
-            return {
+            const newValues = {
                 ...prevState,
                 [e.target.name]: e.target.valueAsNumber,
             };
+            setItem(storageKey, newValues);
+            return newValues;
         });
     }
 

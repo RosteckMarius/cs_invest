@@ -10,6 +10,7 @@ module.exports = {
     parser: "@typescript-eslint/parser",
     plugins: ["react-refresh"],
     rules: {
+        "@typescript-eslint/no-explicit-any": "warn",
         "no-unused-vars": [
             "warn",
             { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }

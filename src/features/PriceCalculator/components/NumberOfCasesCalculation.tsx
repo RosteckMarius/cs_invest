@@ -4,7 +4,7 @@ import { DECIMAL_PATTERN } from "@/features/PriceCalculator/types/constants.ts";
 import { MdSavings } from "react-icons/md";
 
 export function NumberOfCasesCalculation() {
-    const { calculationValues, handleChange, getNumberOfCases } = useCalcValues();
+    const { calculationValues, handleChange, getNumberOfCases } = useCalcValues("amount");
 
     return (
         <div>

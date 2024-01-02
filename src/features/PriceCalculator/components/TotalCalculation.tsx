@@ -4,7 +4,7 @@ import { InputWithLabel } from "@/components/Form/InputWithLabel.tsx";
 import { MdPaid } from "react-icons/md";
 
 export function TotalCalculation() {
-    const { calculationValues, handleChange, getNeededBankroll } = useCalcValues();
+    const { calculationValues, handleChange, getNeededBankroll } = useCalcValues("total");
 
     return (
         <div>

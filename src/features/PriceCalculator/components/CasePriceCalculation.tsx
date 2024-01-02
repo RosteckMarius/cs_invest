@@ -4,7 +4,7 @@ import { useCalcValues } from "@/features/PriceCalculator/hooks/use-calc-values.
 import { MdPriceChange } from "react-icons/md";
 
 export function CasePriceCalculation() {
-    const { calculationValues, handleChange, getCasePrice } = useCalcValues();
+    const { calculationValues, handleChange, getCasePrice } = useCalcValues("case-price");
 
     return (
         <div>
