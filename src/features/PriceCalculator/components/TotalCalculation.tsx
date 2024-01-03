@@ -1,20 +1,16 @@
 import { useCalcValues } from "@/features/PriceCalculator/hooks/use-calc-values.tsx";
 import { DECIMAL_PATTERN } from "@/features/PriceCalculator/types/constants.ts";
 import { InputWithLabel } from "@/components/Form/InputWithLabel.tsx";
-import { MdPaid } from "react-icons/md";
 
 export function TotalCalculation() {
     const { calculationValues, handleChange, getNeededBankroll } = useCalcValues("total");
 
     return (
         <div>
-            <span className={"flex items-center gap-2 pb-4 text-4xl"}>
-                <MdPaid />
-                <h2>
-                    Calculate how much money you need to open a certain amount of cases with a
-                    certain price
-                </h2>
-            </span>
+            <h2 className={"pb-8"}>
+                Calculate how much money you need to open a certain amount of cases with a certain
+                price
+            </h2>
             <div className={"flex flex-col items-center gap-2 md:flex-row md:justify-center"}>
                 <InputWithLabel
                     name="numberOfCases"

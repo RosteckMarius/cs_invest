@@ -9,6 +9,8 @@
 
     --text-color: rgba(255, 255, 255, 0.87);
     --bg-color: #242424;
+    --gradient: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
 
     color-scheme: light dark;
     color: var(--text-color);
@@ -41,7 +43,7 @@ h1 {
 }
 
 h2 {
-    @apply pb-2 text-xl;
+    @apply text-xl;
 }
 
 html,
@@ -67,7 +69,7 @@ button {
 }
 
 button:hover {
-    border-color: #646cff;
+    border-color: #FF3CAC;
 }
 
 button:focus,

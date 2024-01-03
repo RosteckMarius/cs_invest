@@ -1,18 +1,23 @@
 import { Link, useLocation } from "react-router-dom";
 import classNames from "classnames";
-import { PRICE_CALCULATOR_ROUTE } from "@/routes/public.tsx";
+import { PRICE_CALCULATOR_ROUTE, RARITY_ROUTE } from "@/routes/public.tsx";
 import { MdAttachMoney } from "react-icons/md";
 import React from "react";
 
 export function Navigation() {
     return (
-        <div className={"flex items-center justify-center gap-2 overflow-auto border-b-2 py-4"}>
-            <div className={"absolute left-4 flex items-center gap-2 text-4xl"}>
+        <div
+            className={
+                "flex w-full items-center gap-2 overflow-auto border-b-2 px-4 py-4 md:justify-center"
+            }
+        >
+            <div className={"flex items-center gap-2 text-4xl md:absolute md:left-4"}>
                 <MdAttachMoney />
-                <span className={"text-2xl font-bold"}>CS INVEST</span>
+                <span className={"whitespace-nowrap text-2xl font-bold"}>CS INVEST</span>
             </div>
             <NavItem name={"Home"} to={"/"} />
             <NavItem name={"Calculator"} to={PRICE_CALCULATOR_ROUTE} />
+            <NavItem name={"Rarities"} to={RARITY_ROUTE} />
         </div>
     );
 }

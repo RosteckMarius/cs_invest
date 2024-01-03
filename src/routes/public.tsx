@@ -7,8 +7,10 @@ import { Layout } from "@/components/Layout/Layout.tsx";
 import { PriceCalculator } from "@/features/PriceCalculator/PriceCalculator.tsx";
 import { ErrorPage } from "@/components/ErrorPage.tsx";
 import { App } from "@/App.tsx";
+import { RarityInfo } from "@/features/Rarity/RarityInfo.tsx";
 
 const PRICE_CALCULATOR_ROUTE = "/price-calculator";
+const RARITY_ROUTE = "/rarity";
 const CONTACT_ROUTE = "/contact";
 const ABOUT_US_ROUTE = "/about";
 const FAQ_ROUTE = "/faq";
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
                 element: <PriceCalculator />,
             },
             {
+                path: RARITY_ROUTE,
+                element: <RarityInfo />,
+            },
+            {
                 path: CONTACT_ROUTE,
                 element: <Contact />,
             },
@@ -44,4 +50,12 @@ const router = createBrowserRouter([
     },
 ]);
 
-export { router, PRICE_CALCULATOR_ROUTE, TEST_ROUTE, CONTACT_ROUTE, ABOUT_US_ROUTE, FAQ_ROUTE };
+export {
+    router,
+    PRICE_CALCULATOR_ROUTE,
+    TEST_ROUTE,
+    CONTACT_ROUTE,
+    ABOUT_US_ROUTE,
+    FAQ_ROUTE,
+    RARITY_ROUTE,
+};

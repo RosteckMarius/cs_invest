@@ -7,9 +7,15 @@ export function PriceCalculator() {
         <div>
             <h1 className={"text-center text-3xl font-bold"}>PRICE CALCULATOR</h1>
             <div className={"flex flex-col gap-14 py-8"}>
-                <NumberOfCasesCalculation />
-                <TotalCalculation />
-                <CasePriceCalculation />
+                <div className={"rounded-2xl border-2 border-gray-500 p-4"}>
+                    <NumberOfCasesCalculation />
+                </div>
+                <div className={"rounded-2xl border-2 border-gray-500 p-4"}>
+                    <TotalCalculation />
+                </div>
+                <div className={"rounded-2xl border-2 border-gray-500 p-4"}>
+                    <CasePriceCalculation />
+                </div>
             </div>
         </div>
     );
