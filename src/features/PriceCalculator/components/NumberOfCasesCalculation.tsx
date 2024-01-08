@@ -1,13 +1,15 @@
 import { useCalcValues } from "@/features/PriceCalculator/hooks/use-calc-values.tsx";
 import { InputWithLabel } from "@/components/Form/InputWithLabel.tsx";
 import { DECIMAL_PATTERN } from "@/features/PriceCalculator/types/constants.ts";
+import { useTranslation } from "react-i18next";
 
 export function NumberOfCasesCalculation() {
+    const { t } = useTranslation();
     const { calculationValues, handleChange, getNumberOfCases } = useCalcValues("amount");
 
     return (
         <div>
-            <h2 className={"pb-8"}>Calculate how many cases you can open with your bankroll</h2>
+            <h2 className={"pb-8"}>{t("calc.caseNumber.desc")}</h2>
             <div className={"flex flex-col items-center gap-2 md:flex-row md:justify-center"}>
                 <InputWithLabel
                     name="bankroll"
@@ -15,7 +17,7 @@ export function NumberOfCasesCalculation() {
                     pattern={DECIMAL_PATTERN}
                     value={calculationValues.bankroll}
                     onChange={handleChange}
-                    label={"BANKROLL"}
+                    label={t("calc.caseNumber.input1")}
                 />
                 <InputWithLabel
                     name="casePrice"
@@ -23,7 +25,7 @@ export function NumberOfCasesCalculation() {
                     pattern={DECIMAL_PATTERN}
                     value={calculationValues.casePrice}
                     onChange={handleChange}
-                    label={"CASE PRICE"}
+                    label={t("calc.caseNumber.input2")}
                 />
                 <div className={"my-auto px-2"}>=</div>
                 <InputWithLabel
@@ -31,7 +33,7 @@ export function NumberOfCasesCalculation() {
                     type="number"
                     value={getNumberOfCases().toString()}
                     disabled
-                    label={"POSSIBLE CASES"}
+                    label={t("calc.caseNumber.input3")}
                 />
             </div>
         </div>

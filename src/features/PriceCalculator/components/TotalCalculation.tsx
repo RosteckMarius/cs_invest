@@ -1,16 +1,15 @@
 import { useCalcValues } from "@/features/PriceCalculator/hooks/use-calc-values.tsx";
 import { DECIMAL_PATTERN } from "@/features/PriceCalculator/types/constants.ts";
 import { InputWithLabel } from "@/components/Form/InputWithLabel.tsx";
+import { useTranslation } from "react-i18next";
 
 export function TotalCalculation() {
+    const { t } = useTranslation();
     const { calculationValues, handleChange, getNeededBankroll } = useCalcValues("total");
 
     return (
         <div>
-            <h2 className={"pb-8"}>
-                Calculate how much money you need to open a certain amount of cases with a certain
-                price
-            </h2>
+            <h2 className={"pb-8"}>{t("calc.total.desc")}</h2>
             <div className={"flex flex-col items-center gap-2 md:flex-row md:justify-center"}>
                 <InputWithLabel
                     name="numberOfCases"
@@ -18,7 +17,7 @@ export function TotalCalculation() {
                     pattern={DECIMAL_PATTERN}
                     value={calculationValues.numberOfCases}
                     onChange={handleChange}
-                    label={"NUMBER OF CASES"}
+                    label={t("calc.total.input1")}
                 />
                 <InputWithLabel
                     name="casePrice"
@@ -26,7 +25,7 @@ export function TotalCalculation() {
                     pattern={DECIMAL_PATTERN}
                     value={calculationValues.casePrice}
                     onChange={handleChange}
-                    label={"CASE PRICE"}
+                    label={t("calc.total.input2")}
                 />
                 <div className={"my-auto  px-2"}>=</div>
                 <InputWithLabel
@@ -34,7 +33,7 @@ export function TotalCalculation() {
                     type="number"
                     disabled
                     value={getNeededBankroll().toFixed(2).toString()}
-                    label={"TOTAL PRICE"}
+                    label={t("calc.total.input3")}
                 />
             </div>
         </div>

@@ -1,5 +1,6 @@
-import { openCase, rarityColor, RarityType } from "@/features/Rarity/types/constants.ts";
+import { openCase, rarityColor, RarityKey } from "@/features/Rarity/types/constants.ts";
 import { Button } from "@/components/Element/Button.tsx";
+import { useTranslation } from "react-i18next";
 
 interface CaseDrawProps {
     amount: number;
@@ -8,21 +9,22 @@ interface CaseDrawProps {
 }
 
 export function CaseDraw(props: CaseDrawProps) {
+    const { t } = useTranslation();
     const caseOpeningResults = Array(props.amount)
         .fill("0")
         .map(() => openCase(Math.random()));
 
-    const rarityCounts: { [key in RarityType]: number } = caseOpeningResults.reduce(
+    const rarityCounts: { [key in RarityKey]: number } = caseOpeningResults.reduce(
         (counts, rarity) => {
             counts[rarity] = counts[rarity] + 1;
             return counts;
         },
         {
-            MIL_SPEC_GRADE: 0,
-            RESTRICTED: 0,
-            CLASSIFIED: 0,
-            COVERT: 0,
-            EXCEEDINGLY_RARE: 0,
+            milSpec: 0,
+            restricted: 0,
+            classified: 0,
+            covert: 0,
+            rare: 0,
         },
     );
 
@@ -44,8 +46,8 @@ export function CaseDraw(props: CaseDrawProps) {
             <div className={"flex flex-col items-center justify-center gap-8 md:justify-between"}>
                 <div className={"flex flex-col flex-wrap gap-4 md:flex-row"}>
                     {Object.entries(rarityCounts).map((val, i) => (
-                        <div className={"flex w-full justify-between  md:w-fit"} key={i}>
-                            <div className={"rounded px-1"}>{val[0]}</div>
+                        <div className={"flex w-full justify-between gap-2 md:w-fit"} key={i}>
+                            <div className={"rounded px-1"}>{t(`rarity.type.${val[0]}`)}</div>
                             <div
                                 style={{ background: rarityColor[val[0]] }}
                                 className={"min-w-[40px] rounded px-1 text-center"}
@@ -56,7 +58,7 @@ export function CaseDraw(props: CaseDrawProps) {
                     ))}
                 </div>
                 <Button className={"whitespace-nowrap bg-gray-600 px-8"} onClick={props.reroll}>
-                    OPEN
+                    {t("common.open").toUpperCase()}
                 </Button>
             </div>
         </div>

@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-    @apply text-xl;
+    @apply text-xl md:text-2xl;
 }
 
 html,
@@ -72,10 +72,6 @@ button:hover {
     border-color: #FF3CAC;
 }
 
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
     :root {

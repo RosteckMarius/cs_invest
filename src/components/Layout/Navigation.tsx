@@ -3,8 +3,11 @@ import classNames from "classnames";
 import { PRICE_CALCULATOR_ROUTE, RARITY_ROUTE } from "@/routes/public.tsx";
 import { MdAttachMoney } from "react-icons/md";
 import React from "react";
+import { LanguageSwitcher } from "@/lib/i18next/LanguageSwitcher.tsx";
+import { useTranslation } from "react-i18next";
 
 export function Navigation() {
+    const { t } = useTranslation();
     return (
         <div
             className={
@@ -13,11 +16,14 @@ export function Navigation() {
         >
             <div className={"flex items-center gap-2 text-4xl md:absolute md:left-4"}>
                 <MdAttachMoney />
-                <span className={"whitespace-nowrap text-2xl font-bold"}>CS INVEST</span>
+                <span className={"whitespace-nowrap text-2xl font-bold"}>{t("app.name")}</span>
             </div>
-            <NavItem name={"Home"} to={"/"} />
-            <NavItem name={"Calculator"} to={PRICE_CALCULATOR_ROUTE} />
-            <NavItem name={"Rarities"} to={RARITY_ROUTE} />
+            <NavItem name={t("navi.home")} to={"/"} />
+            <NavItem name={t("navi.chance")} to={RARITY_ROUTE} />
+            <NavItem name={t("navi.calc")} to={PRICE_CALCULATOR_ROUTE} />
+            <div className={"flex items-center gap-2 md:absolute md:right-4"}>
+                <LanguageSwitcher />
+            </div>
         </div>
     );
 }

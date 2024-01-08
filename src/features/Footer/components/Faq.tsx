@@ -1,3 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export function FAQ() {
-    return <div>What is the meaning of life?</div>;
+    const { t } = useTranslation();
+
+    return <div>{t("faq")}</div>;
 }

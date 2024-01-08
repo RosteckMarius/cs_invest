@@ -1,22 +1,26 @@
 import { Rarity } from "@/features/Rarity/types/constants.ts";
+import { useTranslation } from "react-i18next";
 
 interface RarityTileProps {
     rarity: Rarity;
 }
 
 export function RarityTile(props: RarityTileProps) {
-    const { colorHex, name, percentageChance, fractionChance } = props.rarity;
+    const { t } = useTranslation();
+    const { colorHex, i18nKey, percentageChance, fractionChance } = props.rarity;
     return (
         <div
             style={{ borderColor: colorHex }}
-            className={"flex flex-1 flex-col rounded-xl border-2 p-2 text-center "}
+            className={"flex flex-1 flex-col justify-between rounded-xl border-2 p-2 text-center "}
         >
-            <span className={"pb whitespace-nowrap pb-1 text-center text-xl font-semibold"}>
-                {name}
+            <span className={"h-full pb-1 text-xl font-semibold"}>
+                {t(`rarity.type.${i18nKey}`)}
             </span>
             <div className={"grid grid-rows-2 py-1"}>
                 <b> {percentageChance} %</b>
-                <b> {fractionChance}</b>
+                <b>
+                    {fractionChance.at(0)} {t("rarity.chanceDelimiter")} {fractionChance.at(1)}
+                </b>
             </div>
         </div>
     );

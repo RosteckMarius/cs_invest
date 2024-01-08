@@ -1,0 +1,62 @@
+{
+  "app": {
+    "name": "cs invest"
+  },
+  "common": {
+    "open": "Öffnen"
+  },
+  "landing": {
+    "welcome": "Willkommen bei CS Invest! Erkunde die Wahrscheinlichkeiten bestimmte Waffen aus Kisten zu ziehen und berechne deine Case-Openings. Viel Glück und Spaß beim Entdecken!",
+    "feat1": "Finde heraus wie viele Kisten du mit deinem Guthaben öffnen kannst",
+    "feat2": "Finde heraus wie viel es kostet eine bestimmte Anzahl Kisten zu einem bestimmten Preis zu öffnen",
+    "feat3": "Du weißt wie viele Kisten du öffnen willst und kennst dein Guthaben? Finde heraus, die wie teuer die Kiste sein kann"
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "about": "Über uns",
+    "faq": "FAQ"
+  },
+  "navi": {
+    "home": "Home",
+    "calc": "Rechner",
+    "chance": "Chancen"
+  },
+  "calc": {
+    "title": "Preisrechner",
+    "caseNumber": {
+      "desc": "Finde heraus wie viele Kisten du mit deinem Guthaben öffnen kannst",
+      "input1": "Guthaben",
+      "input2": "Kistenpreis",
+      "input3": "Mögliche Kisten"
+    },
+    "total": {
+      "desc": "Finde heraus wie viel es kostet eine bestimmte Anzahl Kisten zu einem bestimmten Preis zu öffnen",
+      "input1": "Anzahl Kisten",
+      "input2": "Kistenpreis",
+      "input3": "Gesamt"
+    },
+    "casePrice": {
+      "desc": "Du weißt wie viele Kisten du öffnen willst und kennst dein Guthaben? Finde heraus, die wie teuer die Kiste sein kann",
+      "input1": "Anzahl Kisten",
+      "input2": "Guthaben",
+      "input3": "Maximaler Kistenpreis"
+    }
+  },
+  "rarity": {
+    "desc": "Es gibt 5 Kategorien von Gegenständen in einer normalen Kiste",
+    "chanceDelimiter": "von",
+    "type": {
+      "milSpec": "Militärstandard",
+      "restricted": "Limitiert",
+      "classified": "Vertraulich",
+      "covert": "Verdeckt",
+      "rare": "Außerordentlich selten"
+    }
+  },
+  "visualizer": {
+    "descLeft": "So könnte es aussehen, wenn du",
+    "descRight": "Kisten öffnest..."
+  },
+  "faq": "Was ist der Sinn des Lebens?",
+  "about": "Ich war super süchtig nach Kisten öffnen"
+}

@@ -1,0 +1,62 @@
+{
+  "app": {
+    "name": "cs invest"
+  },
+  "common": {
+    "open": "open"
+  },
+  "landing": {
+    "welcome": "Welcome to CS Invest! Explore the probabilities and calculate your case openings. Good luck and have fun discovering!",
+    "feat1": "Determine how many cases you can open with your bankroll",
+    "feat2": "Find out the cost of opening a specific number of cases at a given price",
+    "feat3": "Explore the maximum case price based on your budget"
+  },
+  "footer": {
+    "contact": "contact",
+    "about": "about us",
+    "faq": "FAQ"
+  },
+  "navi": {
+    "home": "Home",
+    "calc": "Calculator",
+    "chance": "Rarities"
+  },
+  "calc": {
+    "title": "Price Calculator",
+    "caseNumber": {
+      "desc": "Calculate how many cases you can open with your bankroll",
+      "input1": "Bankroll",
+      "input2": "Case Price",
+      "input3": "Possible Cases"
+    },
+    "total": {
+      "desc": "Calculate how much money you need to open a certain amount of cases with a certain price",
+      "input1": "Number of Cases",
+      "input2": "Case Price",
+      "input3": "Total Price"
+    },
+    "casePrice": {
+      "desc": "Calculate how expensive the case can be if you know the amount you want to open and your bankroll",
+      "input1": "Cases I want to open",
+      "input2": "Bankroll",
+      "input3": "Maximum Case Price"
+    }
+  },
+  "rarity": {
+    "desc": "There are 5 kinds of items you can get from a normal case",
+    "chanceDelimiter": "in",
+    "type": {
+      "milSpec": "Mil-Spec grade",
+      "restricted": "restricted",
+      "classified": "classified",
+      "covert": "covert",
+      "rare": "Exceedingly rare"
+    }
+  },
+  "visualizer": {
+    "descLeft": "This is what opening",
+    "descRight": "cases could look like..."
+  },
+  "faq": "What is the meaning of life?",
+  "about": "I was very addicted to opening cases"
+}

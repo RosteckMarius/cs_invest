@@ -1,3 +1,3 @@
 export function Contact() {
-    return <div>Email: marius.rosteck@gmail.com</div>;
+    return <div>email: marius.rosteck@gmail.com</div>;
 }

@@ -1,3 +1,6 @@
+import { useTranslation } from "react-i18next";
+
 export function About() {
-    return <div>I was very addicted to cases</div>;
+    const { t } = useTranslation();
+    return <div>{t("about")}</div>;
 }
