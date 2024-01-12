@@ -9,11 +9,13 @@ export function RarityVisualizer() {
     const [amount, setAmount] = useState(385);
 
     return (
-        <div className={"flex flex-col gap-8 md:gap-4"}>
-            <div className={"flex flex-wrap justify-center gap-2"}>
+        <div className={"flex flex-col md:gap-10"}>
+            <div className={"flex flex-col flex-wrap items-center gap-2"}>
                 <b>{t("visualizer.descLeft")}</b>
-                <div className={"w-full text-center"}>
+                <div className={"w-fit text-center"}>
                     <Input
+                        type={"number"}
+                        autoFocus
                         className={"w-fit text-center font-bold"}
                         value={amount}
                         onChange={(e) => setAmount(Number(e.target.value))}

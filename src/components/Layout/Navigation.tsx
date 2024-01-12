@@ -1,10 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
-import classNames from "classnames";
 import { PRICE_CALCULATOR_ROUTE, RARITY_ROUTE } from "@/routes/public.tsx";
 import { MdAttachMoney } from "react-icons/md";
 import React from "react";
 import { LanguageSwitcher } from "@/lib/i18next/LanguageSwitcher.tsx";
 import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils.ts";
 
 export function Navigation() {
     const { t } = useTranslation();
@@ -39,7 +39,7 @@ function NavItem(props: NavItemProps) {
     return (
         <Link
             to={props.to}
-            className={classNames("rounded p-2 hover:bg-gray-700", {
+            className={cn("rounded p-2 hover:bg-gray-700", {
                 "underline  underline-offset-4": isActiveItem,
             })}
         >

@@ -6,7 +6,8 @@
     "open": "open"
   },
   "landing": {
-    "welcome": "Welcome to CS Invest! Explore the probabilities and calculate your case openings. Good luck and have fun discovering!",
+    "title": "Welcome to CS Invest!",
+    "desc": "Explore the probabilities and calculate your case openings. Good luck and have fun discovering!",
     "feat1": "Determine how many cases you can open with your bankroll",
     "feat2": "Find out the cost of opening a specific number of cases at a given price",
     "feat3": "Explore the maximum case price based on your budget"
@@ -24,18 +25,21 @@
   "calc": {
     "title": "Price Calculator",
     "caseNumber": {
+      "title": "Possible cases",
       "desc": "Calculate how many cases you can open with your bankroll",
       "input1": "Bankroll",
       "input2": "Case Price",
       "input3": "Possible Cases"
     },
     "total": {
+      "title": "Needed money",
       "desc": "Calculate how much money you need to open a certain amount of cases with a certain price",
       "input1": "Number of Cases",
       "input2": "Case Price",
       "input3": "Total Price"
     },
     "casePrice": {
+      "title": "Maximum case price",
       "desc": "Calculate how expensive the case can be if you know the amount you want to open and your bankroll",
       "input1": "Cases I want to open",
       "input2": "Bankroll",

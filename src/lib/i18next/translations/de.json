@@ -6,7 +6,8 @@
     "open": "Öffnen"
   },
   "landing": {
-    "welcome": "Willkommen bei CS Invest! Erkunde die Wahrscheinlichkeiten bestimmte Waffen aus Kisten zu ziehen und berechne deine Case-Openings. Viel Glück und Spaß beim Entdecken!",
+    "title": "Willkommen bei CS Invest!",
+    "desc": "Erkunde die Wahrscheinlichkeiten bestimmte Waffen aus Kisten zu ziehen und berechne deine Case-Openings. Viel Glück und Spaß beim Entdecken!",
     "feat1": "Finde heraus wie viele Kisten du mit deinem Guthaben öffnen kannst",
     "feat2": "Finde heraus wie viel es kostet eine bestimmte Anzahl Kisten zu einem bestimmten Preis zu öffnen",
     "feat3": "Du weißt wie viele Kisten du öffnen willst und kennst dein Guthaben? Finde heraus, die wie teuer die Kiste sein kann"
@@ -24,18 +25,21 @@
   "calc": {
     "title": "Preisrechner",
     "caseNumber": {
+      "title": "Mögliche Kisten",
       "desc": "Finde heraus wie viele Kisten du mit deinem Guthaben öffnen kannst",
       "input1": "Guthaben",
       "input2": "Kistenpreis",
       "input3": "Mögliche Kisten"
     },
     "total": {
+      "title": "Nötiger Gesamtbetrag",
       "desc": "Finde heraus wie viel es kostet eine bestimmte Anzahl Kisten zu einem bestimmten Preis zu öffnen",
       "input1": "Anzahl Kisten",
       "input2": "Kistenpreis",
       "input3": "Gesamt"
     },
     "casePrice": {
+      "title": "Maximaler Kistenpreis",
       "desc": "Du weißt wie viele Kisten du öffnen willst und kennst dein Guthaben? Finde heraus, die wie teuer die Kiste sein kann",
       "input1": "Anzahl Kisten",
       "input2": "Guthaben",

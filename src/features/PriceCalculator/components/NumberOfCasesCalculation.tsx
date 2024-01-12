@@ -8,34 +8,31 @@ export function NumberOfCasesCalculation() {
     const { calculationValues, handleChange, getNumberOfCases } = useCalcValues("amount");
 
     return (
-        <div>
-            <h2 className={"pb-8"}>{t("calc.caseNumber.desc")}</h2>
-            <div className={"flex flex-col items-center gap-2 md:flex-row md:justify-center"}>
-                <InputWithLabel
-                    name="bankroll"
-                    type="number"
-                    pattern={DECIMAL_PATTERN}
-                    value={calculationValues.bankroll}
-                    onChange={handleChange}
-                    label={t("calc.caseNumber.input1")}
-                />
-                <InputWithLabel
-                    name="casePrice"
-                    type="number"
-                    pattern={DECIMAL_PATTERN}
-                    value={calculationValues.casePrice}
-                    onChange={handleChange}
-                    label={t("calc.caseNumber.input2")}
-                />
-                <div className={"my-auto px-2"}>=</div>
-                <InputWithLabel
-                    name="numberOfCases"
-                    type="number"
-                    value={getNumberOfCases().toString()}
-                    disabled
-                    label={t("calc.caseNumber.input3")}
-                />
-            </div>
+        <div className={"flex flex-col items-center gap-2 md:flex-row md:justify-center"}>
+            <InputWithLabel
+                name="bankroll"
+                type="number"
+                pattern={DECIMAL_PATTERN}
+                value={calculationValues.bankroll}
+                onChange={handleChange}
+                label={t("calc.caseNumber.input1")}
+            />
+            <InputWithLabel
+                name="casePrice"
+                type="number"
+                pattern={DECIMAL_PATTERN}
+                value={calculationValues.casePrice}
+                onChange={handleChange}
+                label={t("calc.caseNumber.input2")}
+            />
+            <div className={"my-auto px-2"}>=</div>
+            <InputWithLabel
+                name="numberOfCases"
+                type="number"
+                value={getNumberOfCases().toString()}
+                disabled
+                label={t("calc.caseNumber.input3")}
+            />
         </div>
     );
 }

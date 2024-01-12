@@ -9,7 +9,6 @@ export function TotalCalculation() {
 
     return (
         <div>
-            <h2 className={"pb-8"}>{t("calc.total.desc")}</h2>
             <div className={"flex flex-col items-center gap-2 md:flex-row md:justify-center"}>
                 <InputWithLabel
                     name="numberOfCases"
