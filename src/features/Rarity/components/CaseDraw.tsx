@@ -35,7 +35,8 @@ export function CaseDraw(props: CaseDrawProps) {
             <div className={"flex min-h-[460px]  md:min-h-[160px]"}>
                 <div className={"flex h-fit flex-wrap pb-8 "}>{tiles}</div>
             </div>
-            <div className={"flex flex-col items-center justify-center gap-8 md:justify-between"}>
+            <div className={"flex flex-col items-center justify-center gap-12 md:justify-between"}>
+                <Button onClick={props.reroll}>{t("common.open").toUpperCase()}</Button>
                 <div className={"flex flex-col flex-wrap gap-4 md:flex-row"}>
                     {Object.entries(rarityCounts).map((val, i) => (
                         <div className={"flex w-full justify-between gap-2 md:w-fit"} key={i}>
@@ -49,9 +50,6 @@ export function CaseDraw(props: CaseDrawProps) {
                         </div>
                     ))}
                 </div>
-                <Button size={"lg"} onClick={props.reroll}>
-                    {t("common.open").toUpperCase()}
-                </Button>
             </div>
         </div>
     );

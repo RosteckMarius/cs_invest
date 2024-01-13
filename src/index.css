@@ -103,6 +103,7 @@
         width: 100dvw;
         min-height: 100dvh;
         height: 100dvh;
+        overflow: auto;
     }
 }
 

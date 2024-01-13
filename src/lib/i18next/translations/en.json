@@ -10,7 +10,9 @@
     "desc": "Explore the probabilities and calculate your case openings. Good luck and have fun discovering!",
     "feat1": "Determine how many cases you can open with your bankroll",
     "feat2": "Find out the cost of opening a specific number of cases at a given price",
-    "feat3": "Explore the maximum case price based on your budget"
+    "feat3": "Check out the maximum case price based on your budget",
+    "feat4": "Explore probabilities to draw certain items from a case",
+    "feat5": "Are you lucky today? Simulate a case opnenings"
   },
   "footer": {
     "contact": "contact",
