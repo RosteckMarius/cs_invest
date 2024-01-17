@@ -9,41 +9,41 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/Element/Card.tsx";
+import React, { ReactNode } from "react";
 
 export function PriceCalculator() {
     const { t } = useTranslation();
+
+    const calculationComponents: { title: string; desc: string; component: ReactNode }[] = [
+        {
+            title: "calc.total.title",
+            desc: "calc.total.desc",
+            component: <TotalCalculation />,
+        },
+        {
+            title: "calc.caseNumber.title",
+            desc: "calc.caseNumber.desc",
+            component: <NumberOfCasesCalculation />,
+        },
+        {
+            title: "calc.casePrice.title",
+            desc: "calc.casePrice.desc",
+            component: <CasePriceCalculation />,
+        },
+    ];
+
     return (
         <div>
             <div className={"flex flex-col gap-14 py-8"}>
-                <Card>
-                    <CardHeader>
-                        <CardTitle>{t("calc.caseNumber.title")}</CardTitle>
-                        <CardDescription>{t("calc.caseNumber.desc")}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <NumberOfCasesCalculation />
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardHeader>
-                        <CardTitle>{t("calc.total.title")}</CardTitle>
-                        <CardDescription>{t("calc.total.desc")}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <TotalCalculation />
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardHeader>
-                        <CardTitle>{t("calc.casePrice.title")}</CardTitle>
-                        <CardDescription>{t("calc.casePrice.desc")}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <CasePriceCalculation />
-                    </CardContent>
-                </Card>
+                {calculationComponents.map((value) => (
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>{t(value.title)}</CardTitle>
+                            <CardDescription>{t(value.desc)}</CardDescription>
+                        </CardHeader>
+                        <CardContent>{value.component}</CardContent>
+                    </Card>
+                ))}
             </div>
         </div>
     );
