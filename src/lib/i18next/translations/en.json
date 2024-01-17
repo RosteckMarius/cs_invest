@@ -22,7 +22,8 @@
   "navi": {
     "home": "Home",
     "calc": "Calculator",
-    "chance": "Rarities"
+    "chance": "Rarities",
+    "advancedCalc": "Advance"
   },
   "calc": {
     "title": "Price Calculator",

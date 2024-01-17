@@ -1,11 +1,19 @@
 import { DECIMAL_PATTERN } from "@/features/PriceCalculator/types/constants.ts";
 import { InputWithLabel } from "@/components/Form/InputWithLabel.tsx";
 import { useTranslation } from "react-i18next";
-import { useCalculation } from "@/features/PriceCalculator/hooks/use-calculation.tsx";
+import { CalculationValues } from "@/features/PriceCalculator/types/types.ts";
+import { ChangeEvent } from "react";
 
-export function TotalCalculation() {
+interface TotalCalculationProps {
+    calcValues: Partial<CalculationValues>;
+    result: number;
+
+    handleChange(e: ChangeEvent<HTMLInputElement>): void;
+}
+
+export function TotalCalculation(props: TotalCalculationProps) {
     const { t } = useTranslation();
-    const { calcValues, handleChange, result } = useCalculation("TOTAL_CALC");
+    const { calcValues, handleChange, result } = props;
 
     return (
         <div className={"flex flex-col items-center gap-2 md:flex-row md:justify-center"}>

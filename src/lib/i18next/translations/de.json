@@ -22,7 +22,8 @@
   "navi": {
     "home": "Home",
     "calc": "Rechner",
-    "chance": "Chancen"
+    "chance": "Chancen",
+    "advancedCalc": "Erweitert"
   },
   "calc": {
     "title": "Preisrechner",

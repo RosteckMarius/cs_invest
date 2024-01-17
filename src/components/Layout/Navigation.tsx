@@ -1,5 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import { PRICE_CALCULATOR_ROUTE, RARITY_ROUTE } from "@/routes/public.tsx";
+import {
+    ADVANCED_PRICE_CALCULATOR_ROUTE,
+    PRICE_CALCULATOR_ROUTE,
+    RARITY_ROUTE,
+} from "@/routes/public.tsx";
 import { MdAttachMoney } from "react-icons/md";
 import React from "react";
 import { LanguageSwitcher } from "@/lib/i18next/LanguageSwitcher.tsx";
@@ -21,6 +25,7 @@ export function Navigation() {
             <NavItem name={t("navi.home")} to={"/"} />
             <NavItem name={t("navi.chance")} to={RARITY_ROUTE} />
             <NavItem name={t("navi.calc")} to={PRICE_CALCULATOR_ROUTE} />
+            <NavItem name={t("navi.advancedCalc")} to={ADVANCED_PRICE_CALCULATOR_ROUTE} />
             <div className={"flex items-center gap-2 md:absolute md:right-4"}>
                 <LanguageSwitcher />
             </div>

@@ -8,8 +8,10 @@ import { PriceCalculator } from "@/features/PriceCalculator/PriceCalculator.tsx"
 import { ErrorPage } from "@/components/ErrorPage.tsx";
 import { App } from "@/App.tsx";
 import { RarityInfo } from "@/features/Rarity/RarityInfo.tsx";
+import { AdvancedRarity } from "@/features/AdvancedRarity/AdvancedRarity.tsx";
 
 const PRICE_CALCULATOR_ROUTE = "/price-calculator";
+const ADVANCED_PRICE_CALCULATOR_ROUTE = "/price-calculator-advanced";
 const RARITY_ROUTE = "/rarity";
 const CONTACT_ROUTE = "/contact";
 const ABOUT_US_ROUTE = "/about";
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: PRICE_CALCULATOR_ROUTE,
                 element: <PriceCalculator />,
+            },
+            {
+                path: ADVANCED_PRICE_CALCULATOR_ROUTE,
+                element: <AdvancedRarity />,
             },
             {
                 path: RARITY_ROUTE,
@@ -58,4 +64,5 @@ export {
     ABOUT_US_ROUTE,
     FAQ_ROUTE,
     RARITY_ROUTE,
+    ADVANCED_PRICE_CALCULATOR_ROUTE,
 };

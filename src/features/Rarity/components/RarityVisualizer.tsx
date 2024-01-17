@@ -5,11 +5,10 @@ import { useTranslation } from "react-i18next";
 
 export function RarityVisualizer() {
     const { t } = useTranslation();
-    const [reroll, setReroll] = useState(false);
     const [amount, setAmount] = useState(385);
 
     return (
-        <div className={"flex flex-col md:gap-10"}>
+        <div className={"flex w-full flex-col md:gap-10"}>
             <div className={"flex flex-col flex-wrap items-center gap-2"}>
                 <b>{t("visualizer.descLeft")}</b>
                 <div className={"w-fit text-center"}>
@@ -23,7 +22,7 @@ export function RarityVisualizer() {
                 </div>
                 <b>{t("visualizer.descRight")}</b>
             </div>
-            <CaseDraw amount={amount} reroll={() => setReroll((prevState) => !prevState)} />
+            <CaseDraw amount={amount} />
         </div>
     );
 }

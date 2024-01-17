@@ -1,6 +1,7 @@
 import { Rarity } from "@/features/Rarity/types/constants.ts";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/Element/Card.tsx";
+import React from "react";
 
 interface RarityTileProps {
     rarity: Rarity;
@@ -10,12 +11,9 @@ export function RarityTile(props: RarityTileProps) {
     const { t } = useTranslation();
     const { colorHex, i18nKey, percentageChance, fractionChance } = props.rarity;
     return (
-        <Card
-            className={"flex flex-1 flex-col justify-between rounded-xl border-2 p-2 text-center "}
-            style={{ borderColor: colorHex }}
-        >
+        <Card className={"flex flex-1 flex-col justify-between rounded-xl p-2 text-center"}>
             <CardHeader>
-                <CardTitle className={"capitalize  md:text-lg"}>
+                <CardTitle style={{ color: colorHex }} className={"capitalize md:text-xl"}>
                     {t(`rarity.type.${i18nKey}`)}
                 </CardTitle>
             </CardHeader>

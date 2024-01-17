@@ -3,40 +3,67 @@ import { Button } from "@/components/Element/Button.tsx";
 import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/Element/Badge.tsx";
 import { countRarities } from "@/features/Rarity/util.ts";
+import React, { useState } from "react";
+import { Spinner } from "@/components/Element/Spinner.tsx";
+import { Card } from "@/components/Element/Card.tsx";
+import { CASE_OPNENING_DELAY } from "@/util/constants.ts";
 
 interface CaseDrawProps {
     amount: number;
-
-    reroll(): void;
 }
 
 export function CaseDraw(props: CaseDrawProps) {
     const { t } = useTranslation();
-    const caseOpeningResults = Array(props.amount)
-        .fill("0")
-        .map(() => openCase(Math.random()));
+    const [reroll, setReroll] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-    const rarityCounts: { [key in RarityKey]: number } = countRarities(caseOpeningResults);
+    const [openingResults, setOpeningResults] = useState<RarityKey[]>([]);
 
-    const tiles = caseOpeningResults.map((e, i) => {
-        return (
-            <div
-                key={i}
-                style={{ background: rarityColor[e] }}
-                className={"border-secondary h-fit w-fit border p-2"}
-            >
-                {" "}
-            </div>
-        );
-    });
+    const newOpening = () => {
+        const results = Array(props.amount || 0)
+            .fill("0")
+            .map(() => openCase(Math.random()));
+        setOpeningResults(results);
+    };
+
+    const rarityCounts: { [key in RarityKey]: number } = countRarities(openingResults);
+
+    const renderTiles = () => {
+        return openingResults.map((e, i) => {
+            return (
+                <div
+                    key={i}
+                    style={{ background: rarityColor[e] }}
+                    className={"h-fit w-fit border border-secondary p-2"}
+                >
+                    {" "}
+                </div>
+            );
+        });
+    };
+
+    const onOpen = () => {
+        newOpening();
+        setLoading(true);
+        setTimeout(() => {
+            setReroll((prevState) => !prevState);
+            setLoading(false);
+        }, CASE_OPNENING_DELAY);
+    };
 
     return (
-        <div>
-            <div className={"flex min-h-[460px]  md:min-h-[160px]"}>
-                <div className={"flex h-fit flex-wrap pb-8 "}>{tiles}</div>
-            </div>
+        <div className={"flex flex-col gap-6"}>
+            <Card
+                className={
+                    "flex min-h-[460px] w-full items-center justify-center border-2 p-2 md:min-h-[160px]"
+                }
+            >
+                <div className={"flex  h-full w-full flex-wrap items-center justify-center"}>
+                    {loading ? <Spinner /> : renderTiles().slice(0, props.amount)}
+                </div>
+            </Card>
             <div className={"flex flex-col items-center justify-center gap-12 md:justify-between"}>
-                <Button onClick={props.reroll}>{t("common.open").toUpperCase()}</Button>
+                <Button onClick={onOpen}>{t("common.open").toUpperCase()}</Button>
                 <div className={"flex flex-col flex-wrap gap-4 md:flex-row"}>
                     {Object.entries(rarityCounts).map((val, i) => (
                         <div className={"flex w-full justify-between gap-2 md:w-fit"} key={i}>

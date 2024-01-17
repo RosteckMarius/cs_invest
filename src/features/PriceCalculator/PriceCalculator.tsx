@@ -10,15 +10,23 @@ import {
     CardTitle,
 } from "@/components/Element/Card.tsx";
 import React, { ReactNode } from "react";
+import { useCalculation } from "@/features/PriceCalculator/hooks/use-calculation.tsx";
 
 export function PriceCalculator() {
     const { t } = useTranslation();
+    const { calcValues, handleChange, result } = useCalculation("TOTAL_CALC");
 
     const calculationComponents: { title: string; desc: string; component: ReactNode }[] = [
         {
             title: "calc.total.title",
             desc: "calc.total.desc",
-            component: <TotalCalculation />,
+            component: (
+                <TotalCalculation
+                    calcValues={calcValues}
+                    result={result}
+                    handleChange={handleChange}
+                />
+            ),
         },
         {
             title: "calc.caseNumber.title",
