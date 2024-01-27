@@ -1,69 +1,69 @@
 {
+  "about": "Ich war super süchtig nach Kisten öffnen",
   "app": {
     "name": "cs invest"
+  },
+  "calc": {
+    "caseNumber": {
+      "desc": "Finde heraus wie viele Kisten du mit deinem Guthaben öffnen kannst",
+      "input1": "Guthaben",
+      "input2": "Kistenpreis",
+      "input3": "Mögliche Kisten",
+      "title": "Mögliche Kisten"
+    },
+    "casePrice": {
+      "desc": "Du weißt wie viele Kisten du öffnen willst und kennst dein Guthaben? Finde heraus, die wie teuer die Kiste sein kann",
+      "input1": "Anzahl Kisten",
+      "input2": "Guthaben",
+      "input3": "Maximaler Kistenpreis",
+      "title": "Maximaler Kistenpreis"
+    },
+    "title": "Preisrechner",
+    "total": {
+      "desc": "Finde heraus wie viel es kostet eine bestimmte Anzahl Kisten zu einem bestimmten Preis zu öffnen",
+      "input1": "Anzahl Kisten",
+      "input2": "Kistenpreis",
+      "input3": "Gesamt",
+      "title": "Nötiger Gesamtbetrag"
+    }
   },
   "common": {
     "open": "Öffnen"
   },
+  "faq": "Was ist der Sinn des Lebens?",
+  "footer": {
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "faq": "FAQ"
+  },
   "landing": {
-    "title": "Willkommen bei CS Invest!",
     "desc": "Erkunde die Wahrscheinlichkeiten und berechne deine Case-Openings. Viel Glück und Spaß beim Entdecken!",
     "feat1": "Finde heraus wie viele Kisten du mit deinem Guthaben öffnen kannst",
     "feat2": "Finde heraus wie viel es kostet eine bestimmte Anzahl Kisten zu einem bestimmten Preis zu öffnen",
     "feat3": "Du weißt wie viele Kisten du öffnen willst und kennst dein Guthaben? Finde heraus, wie teuer die Kiste sein kann",
     "feat4": "Sieh dir an, wie wahrscheinlich es ist eine bestimme Waffe zu ziehen",
-    "feat5": "Ist das Glück heute auf deiner Seite? Simuliere ein case-opening mit echten Wahrscheinlichkeiten"
-  },
-  "footer": {
-    "contact": "Kontakt",
-    "about": "Über uns",
-    "faq": "FAQ"
+    "feat5": "Ist das Glück heute auf deiner Seite? Simuliere ein case-opening mit echten Wahrscheinlichkeiten",
+    "title": "Willkommen bei CS Invest!"
   },
   "navi": {
-    "home": "Home",
+    "advancedCalc": "Erweitert",
     "calc": "Rechner",
     "chance": "Chancen",
-    "advancedCalc": "Erweitert"
-  },
-  "calc": {
-    "title": "Preisrechner",
-    "caseNumber": {
-      "title": "Mögliche Kisten",
-      "desc": "Finde heraus wie viele Kisten du mit deinem Guthaben öffnen kannst",
-      "input1": "Guthaben",
-      "input2": "Kistenpreis",
-      "input3": "Mögliche Kisten"
-    },
-    "total": {
-      "title": "Nötiger Gesamtbetrag",
-      "desc": "Finde heraus wie viel es kostet eine bestimmte Anzahl Kisten zu einem bestimmten Preis zu öffnen",
-      "input1": "Anzahl Kisten",
-      "input2": "Kistenpreis",
-      "input3": "Gesamt"
-    },
-    "casePrice": {
-      "title": "Maximaler Kistenpreis",
-      "desc": "Du weißt wie viele Kisten du öffnen willst und kennst dein Guthaben? Finde heraus, die wie teuer die Kiste sein kann",
-      "input1": "Anzahl Kisten",
-      "input2": "Guthaben",
-      "input3": "Maximaler Kistenpreis"
-    }
+    "home": "Home"
   },
   "rarity": {
-    "desc": "Es gibt 5 Kategorien von Gegenständen in einer normalen Kiste",
     "chanceDelimiter": "von",
+    "desc": "Es gibt 5 Kategorien von Gegenständen in einer normalen Kiste",
     "type": {
-      "milSpec": "Militärstandard",
-      "restricted": "Limitiert",
       "classified": "Vertraulich",
       "covert": "Verdeckt",
-      "rare": "Außerordentlich selten"
+      "mil_spec": "Militärstandard",
+      "rare": "Außerordentlich selten",
+      "restricted": "Limitiert"
     }
   },
   "visualizer": {
     "descLeft": "So könnte es aussehen, wenn du",
     "descRight": "Kisten öffnest..."
-  },
-  "faq": "Was ist der Sinn des Lebens?",
-  "about": "Ich war super süchtig nach Kisten öffnen"
+  }
 }

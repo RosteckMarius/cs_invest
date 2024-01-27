@@ -7,7 +7,7 @@ import { Layout } from "@/components/Layout/Layout.tsx";
 import { PriceCalculator } from "@/features/PriceCalculator/PriceCalculator.tsx";
 import { ErrorPage } from "@/components/ErrorPage.tsx";
 import { App } from "@/App.tsx";
-import { RarityInfo } from "@/features/Rarity/RarityInfo.tsx";
+import { CaseOpeningView } from "@/features/CaseOpening/CaseOpeningView.tsx";
 import { AdvancedRarity } from "@/features/AdvancedRarity/AdvancedRarity.tsx";
 
 const PRICE_CALCULATOR_ROUTE = "/price-calculator";
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
             },
             {
                 path: RARITY_ROUTE,
-                element: <RarityInfo />,
+                element: <CaseOpeningView />,
             },
             {
                 path: CONTACT_ROUTE,
