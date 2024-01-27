@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 export function Visualizer() {
     const { t } = useTranslation();
-    const [amount, setAmount] = useState(385);
+    const [numberOfCases, setNumberOfCases] = useState(385);
 
     return (
         <div className={"flex w-full flex-col md:gap-10"}>
@@ -16,13 +16,13 @@ export function Visualizer() {
                         type={"number"}
                         autoFocus
                         className={"w-fit text-center font-bold"}
-                        value={amount}
-                        onChange={(e) => setAmount(Number(e.target.value))}
+                        value={numberOfCases}
+                        onChange={(e) => setNumberOfCases(Number(e.target.value))}
                     />
                 </div>
                 <b>{t("visualizer.descRight")}</b>
             </div>
-            <CaseOpening numberOfCases={amount} />
+            <CaseOpening numberOfCases={numberOfCases} />
         </div>
     );
 }
