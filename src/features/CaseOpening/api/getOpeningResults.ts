@@ -1,7 +1,7 @@
-import { axiosInstance } from "@/lib/axios.ts";
+import { axiosAuth } from "@/lib/axios.ts";
 
 export const getCaseOpeningResults = async (numberOfCases: number): Promise<OpeningResults> => {
-    return axiosInstance
+    return axiosAuth
         .get(`/api/v1/skin-case?numberOfCases=${numberOfCases}`)
         .then((res) => res.data);
 };

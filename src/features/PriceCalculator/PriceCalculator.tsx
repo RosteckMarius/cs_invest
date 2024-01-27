@@ -44,7 +44,7 @@ export function PriceCalculator() {
         <div>
             <div className={"flex flex-col gap-14 py-8"}>
                 {calculationComponents.map((value) => (
-                    <Card>
+                    <Card key={value.title}>
                         <CardHeader>
                             <CardTitle>{t(value.title)}</CardTitle>
                             <CardDescription>{t(value.desc)}</CardDescription>

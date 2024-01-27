@@ -1,17 +1,25 @@
-import { Link, useLocation } from "react-router-dom";
-import {
-    ADVANCED_PRICE_CALCULATOR_ROUTE,
-    PRICE_CALCULATOR_ROUTE,
-    RARITY_ROUTE,
-} from "@/routes/public.tsx";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { HOME_ROUTE, publicNavigationItems } from "@/routes/public.tsx";
 import { MdAttachMoney } from "react-icons/md";
-import React from "react";
+import React, { useContext } from "react";
 import { LanguageSwitcher } from "@/lib/i18next/LanguageSwitcher.tsx";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils.ts";
+import { privateNavigationItems } from "@/routes/private.tsx";
+import { UserContext } from "@/context/UserContext.tsx";
+import { Button } from "@/components/Element/Button.tsx";
 
 export function Navigation() {
     const { t } = useTranslation();
+    const navigate = useNavigate();
+    const { user, logout } = useContext(UserContext);
+    const navItems = () => {
+        const availableRoutes = user ? privateNavigationItems : publicNavigationItems;
+        return availableRoutes.map((item) => (
+            <NavItem key={item.label} name={item.label} to={item.route} />
+        ));
+    };
+
     return (
         <div
             className={
@@ -20,14 +28,21 @@ export function Navigation() {
         >
             <div className={"flex items-center gap-2 text-4xl md:absolute md:left-4"}>
                 <MdAttachMoney />
-                <span className={"whitespace-nowrap text-2xl font-bold"}>{t("app.name")}</span>
+                <span
+                    onClick={() => navigate(HOME_ROUTE)}
+                    className={"whitespace-nowrap text-2xl font-bold"}
+                >
+                    {t("app.name")}
+                </span>
             </div>
-            <NavItem name={t("navi.home")} to={"/"} />
-            <NavItem name={t("navi.chance")} to={RARITY_ROUTE} />
-            <NavItem name={t("navi.calc")} to={PRICE_CALCULATOR_ROUTE} />
-            <NavItem name={t("navi.advancedCalc")} to={ADVANCED_PRICE_CALCULATOR_ROUTE} />
+            {navItems()}
             <div className={"flex items-center gap-2 md:absolute md:right-4"}>
                 <LanguageSwitcher />
+                {user && (
+                    <Button variant={"outline"} onClick={logout}>
+                        logout
+                    </Button>
+                )}
             </div>
         </div>
     );
@@ -39,16 +54,17 @@ interface NavItemProps {
 }
 
 function NavItem(props: NavItemProps) {
+    const { t } = useTranslation();
     const location = useLocation();
     const isActiveItem = location.pathname === props.to;
     return (
         <Link
             to={props.to}
             className={cn("rounded p-2 hover:bg-gray-700", {
-                "underline  underline-offset-4": isActiveItem,
+                "underline underline-offset-4": isActiveItem,
             })}
         >
-            <span className={"text-2xl"}>{props.name}</span>
+            <span className={"text-2xl"}>{t(props.name)}</span>
         </Link>
     );
 }

@@ -8,7 +8,11 @@ export function useLocalStorage() {
         return JSON.parse(localStorage.getItem(key));
     }
 
-    return { setItem, getItem };
+    function removeItem(key: LocalStorageKey) {
+        localStorage.removeItem(key);
+    }
+
+    return { setItem, getItem, removeItem };
 }
 
-export type LocalStorageKey = "TOTAL_CALC" | "NUMBER_OF_CASES_CALC" | "CASE_PRICE_CALC";
+export type LocalStorageKey = "TOTAL_CALC" | "NUMBER_OF_CASES_CALC" | "CASE_PRICE_CALC" | "token";

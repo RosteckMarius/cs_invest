@@ -49,7 +49,9 @@
     "advancedCalc": "Erweitert",
     "calc": "Rechner",
     "chance": "Chancen",
-    "home": "Home"
+    "home": "Home",
+    "login": "Anmelden",
+    "register": "Registrieren"
   },
   "rarity": {
     "chanceDelimiter": "von",
