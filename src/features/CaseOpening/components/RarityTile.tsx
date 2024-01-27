@@ -1,4 +1,4 @@
-import { Rarity } from "@/features/Rarity/types/constants.ts";
+import { Rarity } from "@/features/CaseOpening/types/constants.ts";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/Element/Card.tsx";
 import React from "react";

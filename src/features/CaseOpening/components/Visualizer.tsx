@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Input } from "@/components/Form/Input.tsx";
-import { CaseDraw } from "@/features/Rarity/components/CaseDraw.tsx";
+import { CaseOpening } from "@/features/CaseOpening/components/CaseOpening.tsx";
 import { useTranslation } from "react-i18next";
 
-export function RarityVisualizer() {
+export function Visualizer() {
     const { t } = useTranslation();
     const [amount, setAmount] = useState(385);
 
@@ -22,7 +22,7 @@ export function RarityVisualizer() {
                 </div>
                 <b>{t("visualizer.descRight")}</b>
             </div>
-            <CaseDraw amount={amount} />
+            <CaseOpening numberOfCases={amount} />
         </div>
     );
 }

@@ -1,69 +1,69 @@
 {
+  "about": "I was very addicted to opening cases",
   "app": {
     "name": "cs invest"
+  },
+  "calc": {
+    "caseNumber": {
+      "desc": "Calculate how many cases you can open with your bankroll",
+      "input1": "Bankroll",
+      "input2": "Case Price",
+      "input3": "Possible Cases",
+      "title": "Possible cases"
+    },
+    "casePrice": {
+      "desc": "Calculate how expensive the case can be if you know the amount you want to open and your bankroll",
+      "input1": "Cases I want to open",
+      "input2": "Bankroll",
+      "input3": "Maximum Case Price",
+      "title": "Maximum case price"
+    },
+    "title": "Price Calculator",
+    "total": {
+      "desc": "Calculate how much money you need to open a certain amount of cases with a certain price",
+      "input1": "Number of Cases",
+      "input2": "Case Price",
+      "input3": "Total Price",
+      "title": "Needed money"
+    }
   },
   "common": {
     "open": "open"
   },
+  "faq": "What is the meaning of life?",
+  "footer": {
+    "about": "about us",
+    "contact": "contact",
+    "faq": "FAQ"
+  },
   "landing": {
-    "title": "Welcome to CS Invest!",
     "desc": "Explore the probabilities and calculate your case openings. Good luck and have fun discovering!",
     "feat1": "Determine how many cases you can open with your bankroll",
     "feat2": "Find out the cost of opening a specific number of cases at a given price",
     "feat3": "Check out the maximum case price based on your budget",
     "feat4": "Explore probabilities to draw certain items from a case",
-    "feat5": "Are you lucky today? Simulate a case opnenings"
-  },
-  "footer": {
-    "contact": "contact",
-    "about": "about us",
-    "faq": "FAQ"
+    "feat5": "Are you lucky today? Simulate a case opnenings",
+    "title": "Welcome to CS Invest!"
   },
   "navi": {
-    "home": "Home",
+    "advancedCalc": "Advance",
     "calc": "Calculator",
     "chance": "Rarities",
-    "advancedCalc": "Advance"
-  },
-  "calc": {
-    "title": "Price Calculator",
-    "caseNumber": {
-      "title": "Possible cases",
-      "desc": "Calculate how many cases you can open with your bankroll",
-      "input1": "Bankroll",
-      "input2": "Case Price",
-      "input3": "Possible Cases"
-    },
-    "total": {
-      "title": "Needed money",
-      "desc": "Calculate how much money you need to open a certain amount of cases with a certain price",
-      "input1": "Number of Cases",
-      "input2": "Case Price",
-      "input3": "Total Price"
-    },
-    "casePrice": {
-      "title": "Maximum case price",
-      "desc": "Calculate how expensive the case can be if you know the amount you want to open and your bankroll",
-      "input1": "Cases I want to open",
-      "input2": "Bankroll",
-      "input3": "Maximum Case Price"
-    }
+    "home": "Home"
   },
   "rarity": {
-    "desc": "There are 5 kinds of items you can get from a normal case",
     "chanceDelimiter": "in",
+    "desc": "There are 5 kinds of items you can get from a normal case",
     "type": {
-      "milSpec": "Mil-Spec grade",
-      "restricted": "restricted",
       "classified": "classified",
       "covert": "covert",
-      "rare": "Exceedingly rare"
+      "mil_spec": "Mil-Spec grade",
+      "rare": "Exceedingly rare",
+      "restricted": "restricted"
     }
   },
   "visualizer": {
     "descLeft": "This is what opening",
     "descRight": "cases could look like..."
-  },
-  "faq": "What is the meaning of life?",
-  "about": "I was very addicted to opening cases"
+  }
 }
