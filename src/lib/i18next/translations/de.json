@@ -3,6 +3,18 @@
   "app": {
     "name": "cs invest"
   },
+  "auth": {
+    "forgotpw": "Passwort vergessen?",
+    "login": "Anmelden",
+    "logout": "Ausloggen",
+    "register": {
+      "email": "E-mail",
+      "firstname": "Vorname",
+      "lastname": "Nachname",
+      "password": "Passwort",
+      "title": "Konto erstellen"
+    }
+  },
   "calc": {
     "caseNumber": {
       "desc": "Finde heraus wie viele Kisten du mit deinem Guthaben öffnen kannst",

@@ -13,8 +13,10 @@ import { ChangeEvent, useContext, useState } from "react";
 import { UserContext } from "@/context/UserContext.tsx";
 import { RegistrationRequest } from "@/features/Authentication/types/RegistrationRequest.ts";
 import { HOME_ROUTE } from "@/routes/public.tsx";
+import { useTranslation } from "react-i18next";
 
 export function Registration() {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const { setUser } = useContext(UserContext);
     const [regRequest, setRegRequest] = useState({} as RegistrationRequest);
@@ -35,20 +37,37 @@ export function Registration() {
     };
 
     return (
-        <Card>
+        <Card className={"w-4/5 md:w-1/4"}>
             <CardHeader>
-                <CardTitle className={"text-xl"}>Registration</CardTitle>
+                <CardTitle className={"text-2xl"}>
+                    {t("auth.register.title").toUpperCase()}
+                </CardTitle>
             </CardHeader>
-            <CardContent>
-                <section className={"flex flex-col gap-2"}>
-                    <InputWithLabel id={"firstName"} onChange={handleChange} label={"Vorname"} />
-                    <InputWithLabel id={"lastName"} onChange={handleChange} label={"Nachname"} />
-                    <InputWithLabel id={"email"} onChange={handleChange} label={"email"} />
-                    <InputWithLabel id={"password"} onChange={handleChange} label={"password"} />
-                </section>
+            <CardContent className={"flex flex-col gap-4"}>
+                <InputWithLabel
+                    autoFocus
+                    id={"firstName"}
+                    onChange={handleChange}
+                    label={t("auth.register.firstname")}
+                />
+                <InputWithLabel
+                    id={"lastName"}
+                    onChange={handleChange}
+                    label={t("auth.register.lastname")}
+                />
+                <InputWithLabel
+                    id={"email"}
+                    onChange={handleChange}
+                    label={t("auth.register.email")}
+                />
+                <InputWithLabel
+                    id={"password"}
+                    onChange={handleChange}
+                    label={t("auth.register.password")}
+                />
             </CardContent>
-            <CardFooter className={"justify-center"}>
-                <Button onClick={register}>Sign Up</Button>
+            <CardFooter className={"items-center justify-center"}>
+                <Button onClick={register}>{t("auth.register.title")}</Button>
             </CardFooter>
         </Card>
     );

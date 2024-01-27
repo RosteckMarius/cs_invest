@@ -40,7 +40,7 @@ export function Navigation() {
                 <LanguageSwitcher />
                 {user && (
                     <Button variant={"outline"} onClick={logout}>
-                        logout
+                        {t("auth.logout")}
                     </Button>
                 )}
             </div>

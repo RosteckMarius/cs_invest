@@ -3,6 +3,18 @@
   "app": {
     "name": "cs invest"
   },
+  "auth": {
+    "forgotpw": "forgot password?",
+    "login": "Login",
+    "logout": "Logout",
+    "register": {
+      "email": "Email",
+      "firstname": "First name",
+      "lastname": "Last name",
+      "password": "Password",
+      "title": "Sign up"
+    }
+  },
   "calc": {
     "caseNumber": {
       "desc": "Calculate how many cases you can open with your bankroll",
