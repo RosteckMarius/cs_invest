@@ -13,6 +13,18 @@ export interface Rarity {
     fractionChance: [number, number];
 }
 
+export interface OpeningResults {
+    counts: ResultCount;
+    results: string[];
+}
+
+export const emptyOpeningResults = (): OpeningResults => {
+    return {
+        counts: emptyResultCount(),
+        results: [],
+    };
+};
+
 export const rarities: Rarity[] = [
     {
         i18nKey: "mil_spec",
@@ -52,4 +64,53 @@ export const rarityColor: { [key in RarityKey]: string } = {
     classified: CLASSIFIED_COLOR,
     covert: COVERT_COLOR,
     rare: RARE_COLOR,
+};
+
+export interface ResultCount {
+    mil_spec: number;
+    restricted: number;
+    classified: number;
+    covert: number;
+    rare: number;
+}
+
+export const emptyResultCount = (): ResultCount => {
+    return {
+        mil_spec: 0,
+        restricted: 0,
+        classified: 0,
+        covert: 0,
+        rare: 0,
+    };
+};
+
+/**
+ *
+ * @param amount of cases that should be opened
+ */
+export const getCaseOpeningResultsFE = (amount: number): OpeningResults => {
+    const myListOfDraws = [];
+    const counts = emptyResultCount();
+
+    for (let i = 0; i < amount; i++) {
+        const draw = getRandomRarity();
+        myListOfDraws.push(draw);
+        counts[draw] = counts[draw] + 1;
+    }
+
+    return {
+        results: myListOfDraws,
+        counts: counts,
+    };
+};
+
+const getRandomRarity = () => {
+    const random = Math.random();
+    if (random < 0 || random > 1) throw new Error("Should be between 0 and 1");
+
+    if (random <= 0.7992) return "mil_spec";
+    if (random <= 0.959) return "restricted";
+    if (random <= 0.991) return "classified";
+    if (random <= 0.9974) return "covert";
+    return "rare";
 };

@@ -5,10 +5,10 @@ import { Card } from "@/components/Element/Card.tsx";
 import { CASE_OPNENING_DELAY } from "@/util/constants.ts";
 import {
     emptyOpeningResults,
-    getCaseOpeningResults,
+    getCaseOpeningResultsFE,
     OpeningResults,
-} from "@/features/CaseOpening/api/getOpeningResults.ts";
-import { rarityColor } from "@/features/CaseOpening/types/constants.ts";
+    rarityColor,
+} from "@/features/CaseOpening/types/constants.ts";
 import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/Element/Badge.tsx";
 
@@ -22,8 +22,8 @@ export function CaseOpening(props: CaseDrawProps) {
 
     const [openingResults, setOpeningResults] = useState<OpeningResults>(emptyOpeningResults);
 
-    const newOpening = () => {
-        getCaseOpeningResults(props.numberOfCases).then((results) => setOpeningResults(results));
+    const drawCases = () => {
+        setOpeningResults(getCaseOpeningResultsFE(props.numberOfCases));
     };
 
     const renderTiles = () => {
@@ -42,7 +42,7 @@ export function CaseOpening(props: CaseDrawProps) {
 
     const onOpen = () => {
         setLoading(true);
-        newOpening();
+        drawCases();
         setTimeout(() => {
             setLoading(false);
         }, CASE_OPNENING_DELAY);
@@ -66,7 +66,7 @@ export function CaseOpening(props: CaseDrawProps) {
                         <div className={"flex w-full justify-between gap-2 md:w-fit"} key={i}>
                             <div className={"rounded px-1"}>{t(`rarity.type.${val.at(0)}`)}</div>
                             <Badge
-                                className={"min-w-[40px]"}
+                                className={"min-w-[50px]"}
                                 style={{ background: rarityColor[val.at(0)] }}
                             >
                                 {val.at(1)}

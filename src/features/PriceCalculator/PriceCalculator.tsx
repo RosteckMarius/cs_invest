@@ -18,6 +18,11 @@ export function PriceCalculator() {
 
     const calculationComponents: { title: string; desc: string; component: ReactNode }[] = [
         {
+            title: "calc.caseNumber.title",
+            desc: "calc.caseNumber.desc",
+            component: <NumberOfCasesCalculation />,
+        },
+        {
             title: "calc.total.title",
             desc: "calc.total.desc",
             component: (
@@ -28,11 +33,7 @@ export function PriceCalculator() {
                 />
             ),
         },
-        {
-            title: "calc.caseNumber.title",
-            desc: "calc.caseNumber.desc",
-            component: <NumberOfCasesCalculation />,
-        },
+
         {
             title: "calc.casePrice.title",
             desc: "calc.casePrice.desc",
