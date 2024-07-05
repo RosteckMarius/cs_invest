@@ -27,7 +27,7 @@ export function Navigation() {
                     onClick={() => navigate(HOME_ROUTE)}
                     className={"whitespace-nowrap text-2xl font-bold"}
                 >
-                    {t("app.name")}
+                    {t("app.name").toUpperCase()}
                 </span>
             </div>
             {navItems()}

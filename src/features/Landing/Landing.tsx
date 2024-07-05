@@ -7,7 +7,7 @@ export function Landing() {
     return (
         <div className={"flex flex-col items-center gap-4 p-8 text-center md:gap-16"}>
             <div className={"flex flex-col items-center gap-4"}>
-                <div className={"pb-4 text-2xl font-bold md:w-2/3 md:text-5xl"}>
+                <div className={"whitespace-nowrap pb-4 text-2xl font-bold md:w-2/3 md:text-5xl"}>
                     {t("landing.title").toUpperCase()}
                 </div>
                 <div className={"pb-12 text-xl font-bold md:w-2/3"}>{t("landing.desc")}</div>

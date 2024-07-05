@@ -1,7 +1,7 @@
 {
   "about": "I was very addicted to opening cases",
   "app": {
-    "name": "cs invest"
+    "name": "case calc"
   },
   "calc": {
     "caseNumber": {
@@ -43,7 +43,7 @@
     "feat3": "Check out the maximum case price based on your budget",
     "feat4": "Explore probabilities to draw certain items from a case",
     "feat5": "Are you lucky today? Simulate a case opnenings",
-    "title": "Welcome to CS Invest!"
+    "title": "Welcome to case calc!"
   },
   "navi": {
     "advancedCalc": "Advance",

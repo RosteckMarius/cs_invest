@@ -1,7 +1,7 @@
 {
   "about": "Ich war super süchtig nach Kisten öffnen",
   "app": {
-    "name": "cs invest"
+    "name": "case calc"
   },
   "calc": {
     "caseNumber": {
@@ -43,7 +43,7 @@
     "feat3": "Du weißt wie viele Kisten du öffnen willst und kennst dein Guthaben? Finde heraus, wie teuer die Kiste sein kann",
     "feat4": "Sieh dir an, wie wahrscheinlich es ist eine bestimme Waffe zu ziehen",
     "feat5": "Ist das Glück heute auf deiner Seite? Simuliere ein case-opening mit echten Wahrscheinlichkeiten",
-    "title": "Willkommen bei CS Invest!"
+    "title": "Willkommen bei case calc!"
   },
   "navi": {
     "advancedCalc": "Erweitert",
