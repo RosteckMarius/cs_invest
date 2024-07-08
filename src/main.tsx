@@ -4,11 +4,13 @@ import "@/index.css";
 import "./lib/i18next/i18n.ts";
 import { App } from "@/App.tsx";
 import { BrowserRouter } from "react-router-dom";
+import { Toaster } from "@/components/ui/toaster.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
         <BrowserRouter>
             <App />
+            <Toaster />
         </BrowserRouter>
     </React.StrictMode>,
 );

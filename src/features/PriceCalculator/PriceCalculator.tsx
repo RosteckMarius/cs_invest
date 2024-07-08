@@ -8,7 +8,7 @@ import {
     CardDescription,
     CardHeader,
     CardTitle,
-} from "@/components/Element/Card.tsx";
+} from "@/components/ui/Card.tsx";
 import React, { ReactNode } from "react";
 import { useCalculation } from "@/features/PriceCalculator/hooks/use-calculation.tsx";
 

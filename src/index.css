@@ -107,7 +107,7 @@
     }
 }
 
-svg {
+.feature svg {
     background: linear-gradient(225deg, #E6CC5F 0%, #EB4B4B 50%, #D32DE5 100%);
     padding: .5rem;
     border-radius: 15%;

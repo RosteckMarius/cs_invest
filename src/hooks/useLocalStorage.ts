@@ -15,4 +15,9 @@ export function useLocalStorage() {
     return { setItem, getItem, removeItem };
 }
 
-export type LocalStorageKey = "TOTAL_CALC" | "NUMBER_OF_CASES_CALC" | "CASE_PRICE_CALC" | "token";
+export type LocalStorageKey =
+    | "TOTAL_CALC"
+    | "NUMBER_OF_CASES_CALC"
+    | "CASE_PRICE_CALC"
+    | "KEY_PRICE"
+    | "token";

@@ -28,7 +28,8 @@
     }
   },
   "common": {
-    "open": "open"
+    "open": "open",
+    "save": "Save"
   },
   "faq": "What is the meaning of life?",
   "footer": {
@@ -63,6 +64,18 @@
       "rare": "Exceedingly rare",
       "restricted": "restricted"
     }
+  },
+  "settings": {
+    "keyprice": {
+      "desc": "Set the keyprice in your country",
+      "label": "Case Price",
+      "title": "Key Price",
+      "updated": "Key Price updated"
+    },
+    "lang": {
+      "label": "Language"
+    },
+    "title": "Settings"
   },
   "visualizer": {
     "descLeft": "This is what opening",

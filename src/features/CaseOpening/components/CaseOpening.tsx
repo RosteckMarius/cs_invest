@@ -1,7 +1,7 @@
-import { Button } from "@/components/Element/Button.tsx";
+import { Button } from "@/components/ui/Button.tsx";
 import React, { useState } from "react";
-import { Spinner } from "@/components/Element/Spinner.tsx";
-import { Card } from "@/components/Element/Card.tsx";
+import { Spinner } from "@/components/ui/Spinner.tsx";
+import { Card } from "@/components/ui/Card.tsx";
 import { CASE_OPNENING_DELAY } from "@/util/constants.ts";
 import {
     emptyOpeningResults,
@@ -10,7 +10,7 @@ import {
     rarityColor,
 } from "@/features/CaseOpening/types/constants.ts";
 import { useTranslation } from "react-i18next";
-import { Badge } from "@/components/Element/Badge.tsx";
+import { Badge } from "@/components/ui/Badge.tsx";
 
 interface CaseDrawProps {
     numberOfCases: number;

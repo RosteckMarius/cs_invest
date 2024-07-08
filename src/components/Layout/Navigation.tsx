@@ -2,9 +2,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HOME_ROUTE, publicNavigationItems } from "@/routes/public.tsx";
 import { MdAttachMoney } from "react-icons/md";
 import React from "react";
-import { LanguageSwitcher } from "@/lib/i18next/LanguageSwitcher.tsx";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils.ts";
+import { Settings } from "@/features/Settings/Settings.tsx";
 
 export function Navigation() {
     const { t } = useTranslation();
@@ -32,7 +32,7 @@ export function Navigation() {
             </div>
             {navItems()}
             <div className={"flex items-center gap-2 md:absolute md:right-4"}>
-                <LanguageSwitcher />
+                <Settings />
             </div>
         </div>
     );
