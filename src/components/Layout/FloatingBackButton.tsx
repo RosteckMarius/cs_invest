@@ -1,6 +1,6 @@
 import { MdArrowBack } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/Element/Button.tsx";
+import { Button } from "@/components/ui/Button.tsx";
 
 export function FloatingBackButton() {
     const navigate = useNavigate();

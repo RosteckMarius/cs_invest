@@ -9,6 +9,7 @@ import { CaseOpeningView } from "@/features/CaseOpening/CaseOpeningView.tsx";
 import { Contact } from "@/features/Footer/components/Contact.tsx";
 import { About } from "@/features/Footer/components/About.tsx";
 import { FAQ } from "@/features/Footer/components/Faq.tsx";
+import React from "react";
 
 export function App() {
     return (

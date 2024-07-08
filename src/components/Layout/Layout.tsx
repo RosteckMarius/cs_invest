@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Layout/Navigation.tsx";
 import { Footer } from "@/components/Layout/Footer.tsx";
+import React from "react";
 
 export function Layout(props: { children: React.ReactElement }) {
     return (

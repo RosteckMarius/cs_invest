@@ -1,6 +1,7 @@
 import i18n from "@/lib/i18next/i18n.ts";
 import { useState } from "react";
 import { cn } from "@/lib/utils.ts";
+import { Button } from "@/components/ui/Button.tsx";
 
 export function LanguageSwitcher() {
     const [language, setLanguage] = useState("de");
@@ -14,23 +15,25 @@ export function LanguageSwitcher() {
     }
 
     return (
-        <div className={"flex gap-2"}>
-            <i
-                className={cn("p-1", {
-                    "rounded border border-gray-400": isCurrentLanguage("de"),
+        <div className={"flex w-full gap-2"}>
+            <Button
+                variant={"ghost"}
+                className={cn("flex w-1/2 justify-center p-1", {
+                    "rounded border-2 border-gray-400": isCurrentLanguage("de"),
                 })}
                 onClick={() => changeLanguage("de")}
             >
                 🇩🇪
-            </i>
-            <i
-                className={cn("p-1", {
-                    "rounded border border-gray-400": isCurrentLanguage("en"),
+            </Button>
+            <Button
+                variant={"ghost"}
+                className={cn(" flex w-1/2 justify-center p-1", {
+                    "rounded border-2 border-gray-400": isCurrentLanguage("en"),
                 })}
                 onClick={() => changeLanguage("en")}
             >
                 🇺🇸
-            </i>
+            </Button>
         </div>
     );
 }

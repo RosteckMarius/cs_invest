@@ -12,7 +12,7 @@ export function FeatureBlock(props: FeatureBlockProps) {
         <div className={"flex items-center"}>
             <span
                 className={cn(
-                    "flex w-1/3 justify-center text-6xl md:text-8xl",
+                    "feature flex w-1/3 justify-center text-6xl md:text-8xl",
                     { "order-first": props.iconFirst },
                     { "order-last": !props.iconFirst },
                 )}

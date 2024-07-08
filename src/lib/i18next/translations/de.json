@@ -28,7 +28,8 @@
     }
   },
   "common": {
-    "open": "Öffnen"
+    "open": "Öffnen",
+    "save": "Speichern"
   },
   "faq": "Was ist der Sinn des Lebens?",
   "footer": {
@@ -63,6 +64,18 @@
       "rare": "Außerordentlich selten",
       "restricted": "Limitiert"
     }
+  },
+  "settings": {
+    "keyprice": {
+      "desc": "Lege fest wie viel eine Kiste in deinem Land kostet",
+      "label": "Kistenpreis",
+      "title": "Kistenpreis",
+      "updated": "Kistenpreis aktualisiert"
+    },
+    "lang": {
+      "label": "Sprache"
+    },
+    "title": "Einstellungen"
   },
   "visualizer": {
     "descLeft": "So könnte es aussehen, wenn du",
