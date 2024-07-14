@@ -1,23 +1,26 @@
 import { useTranslation } from "react-i18next";
 import { useLocalStorage } from "@/hooks/useLocalStorage.ts";
-import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { DEFAULT_KEY_PRICE } from "@/util/constants.ts";
-import { Label } from "@/components/ui/label.tsx";
 import { Input } from "@/components/Form/Input.tsx";
 import { Button } from "@/components/ui/Button.tsx";
 import { MdSave } from "react-icons/md";
+import { useToast } from "@/components/ui/use-toast.ts";
+import { useNavigate } from "@tanstack/react-router";
+import { Label } from "@/components/ui/label.tsx";
 
 export function KeyPriceSelector() {
     const { t } = useTranslation();
     const { setItem, getItem } = useLocalStorage();
+    const { toast } = useToast();
     const navigate = useNavigate();
 
     const [keyPrice, setKeyPrice] = useState(getItem("KEY_PRICE") ?? DEFAULT_KEY_PRICE);
 
     const onKeyPriceChange = () => {
         setItem("KEY_PRICE", keyPrice);
-        navigate(0);
+        toast({ variant: "success", title: t("settings.keyprice.updated") });
+        navigate({});
     };
 
     const isInvalidKeyPrice = () => {

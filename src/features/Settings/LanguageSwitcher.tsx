@@ -15,10 +15,10 @@ export function LanguageSwitcher() {
     }
 
     return (
-        <div className={"flex w-full gap-2"}>
+        <div className={"grid grid-cols-2 gap-2"}>
             <Button
                 variant={"ghost"}
-                className={cn("flex w-1/2 justify-center p-1", {
+                className={cn("flex justify-center p-1", {
                     "rounded border-2 border-gray-400": isCurrentLanguage("de"),
                 })}
                 onClick={() => changeLanguage("de")}
@@ -27,7 +27,7 @@ export function LanguageSwitcher() {
             </Button>
             <Button
                 variant={"ghost"}
-                className={cn(" flex w-1/2 justify-center p-1", {
+                className={cn(" flex justify-center p-1", {
                     "rounded border-2 border-gray-400": isCurrentLanguage("en"),
                 })}
                 onClick={() => changeLanguage("en")}

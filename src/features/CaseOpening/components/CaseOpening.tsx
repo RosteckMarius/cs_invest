@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button.tsx";
 import React, { useState } from "react";
 import { Spinner } from "@/components/ui/Spinner.tsx";
 import { Card } from "@/components/ui/Card.tsx";
-import { CASE_OPNENING_DELAY } from "@/util/constants.ts";
+import { CASE_OPENING_DELAY } from "@/util/constants.ts";
 import {
     emptyOpeningResults,
     getCaseOpeningResultsFE,
@@ -45,7 +45,7 @@ export function CaseOpening(props: CaseDrawProps) {
         drawCases();
         setTimeout(() => {
             setLoading(false);
-        }, CASE_OPNENING_DELAY);
+        }, CASE_OPENING_DELAY);
     };
 
     return (
