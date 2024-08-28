@@ -18,7 +18,7 @@ export function Layout() {
             >
                 <Outlet />
                 <Toaster />
-                <TanStackRouterDevtools />
+                {import.meta.env.DEV && <TanStackRouterDevtools />}
             </div>
             <Footer />
         </div>
