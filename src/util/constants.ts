@@ -1,3 +1,9 @@
+// General
+
+export const CONTACT_EMAIL = "marius.rosteck@gmail.com"
+
+// Case Openings
+
 export const DEFAULT_KEY_PRICE = 2.35;
 
 export const DEFAULT_NUMBER_OF_CASES = 1;

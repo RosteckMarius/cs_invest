@@ -34,7 +34,7 @@
   "faq": "Was ist der Sinn des Lebens?",
   "footer": {
     "about": "Über mich",
-    "contact": "Kontakt",
+    "contact": "Kontakt: {{email}}",
     "faq": "FAQ"
   },
   "landing": {

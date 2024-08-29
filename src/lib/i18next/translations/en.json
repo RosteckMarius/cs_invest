@@ -34,7 +34,7 @@
   "faq": "What is the meaning of life?",
   "footer": {
     "about": "about me",
-    "contact": "contact",
+    "contact": "contact: {{email}}",
     "faq": "FAQ"
   },
   "landing": {
