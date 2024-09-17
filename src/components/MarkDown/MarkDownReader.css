@@ -1,0 +1,60 @@
+.md-reader body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.md-reader h1 {
+    @apply font-bold text-3xl mb-2
+}
+
+.md-reader h2 {
+    @apply font-bold text-2xl mb-2
+}
+
+.md-reader h3 {
+    @apply font-bold text-xl mb-1
+}
+
+.md-reader h3, h4, h5, h6 {
+    @apply font-bold text-lg mb-1
+}
+
+.md-reader p {
+    margin-bottom: 1em;
+}
+
+.md-reader a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.md-reader ul, ol {
+    margin-left: 20px;
+}
+
+.md-reader code {
+    font-family: monospace;
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+}
+
+.md-reader pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.md-reader blockquote {
+    border-left: 3px solid #ccc;
+    padding-left: 10px;
+    margin: 0 0 1em;
+}
+
+.md-reader table {
+    border-collapse: collapse;
+}
+
+.md-reader td, th {
+    border: 1px solid #ccc;
+    padding: 5px;
+}

@@ -35,7 +35,8 @@
   "footer": {
     "about": "Über mich",
     "contact": "Kontakt: {{email}}",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "privacy": "Datenschutzerklärung"
   },
   "landing": {
     "desc": "Erkunde die Wahrscheinlichkeiten und berechne deine Case-Openings. Viel Glück und Spaß beim Entdecken!",
@@ -53,6 +54,9 @@
     "home": "Home",
     "login": "Anmelden",
     "register": "Registrieren"
+  },
+  "privacyPolicy": {
+    "header": "Datenschutzerklärung"
   },
   "rarity": {
     "chanceDelimiter": "von",

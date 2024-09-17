@@ -11,6 +11,7 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as PrivacyPolicyImport } from './routes/privacy-policy'
 import { Route as PriceCalculatorImport } from './routes/price-calculator'
 import { Route as HomeImport } from './routes/home'
 import { Route as FaqImport } from './routes/faq'
@@ -20,6 +21,11 @@ import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const PrivacyPolicyRoute = PrivacyPolicyImport.update({
+  path: '/privacy-policy',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const PriceCalculatorRoute = PriceCalculatorImport.update({
   path: '/price-calculator',
@@ -109,6 +115,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PriceCalculatorImport
       parentRoute: typeof rootRoute
     }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -122,6 +135,7 @@ export const routeTree = rootRoute.addChildren({
   FaqRoute,
   HomeRoute,
   PriceCalculatorRoute,
+  PrivacyPolicyRoute,
 })
 
 /* prettier-ignore-end */
@@ -138,7 +152,8 @@ export const routeTree = rootRoute.addChildren({
         "/contact",
         "/faq",
         "/home",
-        "/price-calculator"
+        "/price-calculator",
+        "/privacy-policy"
       ]
     },
     "/": {
@@ -161,6 +176,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/price-calculator": {
       "filePath": "price-calculator.tsx"
+    },
+    "/privacy-policy": {
+      "filePath": "privacy-policy.tsx"
     }
   }
 }
