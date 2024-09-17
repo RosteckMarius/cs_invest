@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { CONTACT_EMAIL } from "@/util/constants.ts";
 import { Link } from "@tanstack/react-router";
 import { buttonVariants } from "@/components/ui/Button.tsx";
 
@@ -11,7 +10,9 @@ export function Footer() {
                 <Link className={buttonVariants({ variant: "link" })} to={"/privacy-policy"}>
                     {t("footer.privacy")}
                 </Link>
-                {t("footer.contact", { email: CONTACT_EMAIL })}
+                <Link className={buttonVariants({ variant: "link" })} to={"/legal-notice"}>
+                    {t("footer.impressum")}
+                </Link>
             </div>
         </div>
     );

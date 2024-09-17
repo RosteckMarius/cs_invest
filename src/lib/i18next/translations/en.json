@@ -36,6 +36,7 @@
     "about": "about me",
     "contact": "contact: {{email}}",
     "faq": "FAQ",
+    "impressum": "Legal Notice",
     "privacy": "Privacy Policy"
   },
   "landing": {
